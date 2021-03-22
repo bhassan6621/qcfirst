@@ -4,13 +4,13 @@
 Bibi Hassan & Navsangeet Kaur
 
 ## Features
-Responsive Design for mobile, tablet, and desktop
-Links to get more information about how to use the website
-Contact information provided
-Clear Navigation
-Geographic information
-Description
-Images
+*Responsive Design for mobile, tablet, and desktop
+*Links to get more information about how to use the website
+*Contact information provided
+*Clear Navigation
+*Geographic information
+*Description
+*Images
 
 
 
