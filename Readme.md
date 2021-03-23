@@ -23,7 +23,8 @@ It also lets the instructors view the classes that they are teaching, add more c
 
 
 ## Visuals of the QCFirst Website
-These three URL' s include the visual of website on desktop, tablet, and mobile
+These three URL' s include the visual of website on desktop, tablet, and mobile respectively:
+
 ![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/Desktop_UI_UX.pdf)
 ![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/Tablet_UI:UX.pdf)
 ![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/Mobile_UI_UX.pdf)
