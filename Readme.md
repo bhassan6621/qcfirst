@@ -28,15 +28,15 @@ The three visuals of website on desktop, tablet, and mobile respectively:
 
 #### Desktop Version
 
-![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/mobile/QC%20first%20Home%20page.png)
-![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/mobile/Sign%20Up%20page.png)
-![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/mobile/log%20In%20page.png)
+![alt text]()
+![alt text]()
+![alt text]()
 
 #### Tablet Version
 
-![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/mobile/QC%20first%20Home%20page.png)
-![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/mobile/Sign%20Up%20page.png)
-![alt text](https://github.com/bhassan6621/qcfirst/blob/main/QCFirst_UI-UX/mobile/log%20In%20page.png)
+![alt text]()
+![alt text]()
+![alt text]()
 
 #### Mobile Version
 
