@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>QCFirst</title>
+	</head>
+  
+	<body>
+		<header>
+			<div class="topnav" >
+				<img src="Logo.png" alt="Queens College" style="float:left">
+				<div style="float:right">
+				<a href="Login_professor.html"><button name="signOut" id="signOut" type="submit">Sign Out</button><a>
+			</div>
+		</header><br>
+		<h1>Add Course</h1>
+		<form name="courseForm" class="form"  method="post">
+			<label for="courseName">Course Name:</label>
+			<input type="text" name="name" id="courseName"> <br><br>
+
+			<label for="courseId">Course ID:</label>
+			<input type="text" name="id" id="courseId"><br><br>
+
+			<label for="semester">Semester:</label>
+			<select name="semester" id="semester">
+  				<option value="spring">Spring</option>
+				<option value="summer">Summer</option>
+				<option value="fall">Fall</option>
+				<option value="winter">Winter</option>
+			</select><br><br>
+			
+
+			<label for="department">Department:</label>
+			<select name="department" id="department">
+  				<option value="computer science">Computer Science</option>
+				<option value="math">Math</option>
+				<option value="biology">Biology</option>
+				<option value="art">Art</option>
+			</select><br><br>
+			
+
+			<label for="instructor">Instructor:</label>
+			<input type="text" name="instructor" id="instructor"> <br><br>
+
+			<label for="startTime">Start Time:</label>
+			<input type="time" name="time" id="startTime" min="9:00" max="9:00"><br><br>
+			
+			<label for="endTime">End Time:</label>
+			<input type="time" name="time" id="endTime" min="9:00" max="9:00"><br><br>
+			
+			<label for="days">Days:</label>
+			<input type="text" name="day" id="days"> <br><br>
+
+			<label for="startDate">Start Date:</label>
+			<input type="date" name="date" id="startDate"> <br><br>
+			
+			<label for="endtDate">End Date:</label>
+			<input type="date" name="date" id="endtDate"> <br><br>
+
+			<label for="enrollDead">Enrollment Deadline:</label>
+			<input type="date" name="enroll" id="enrollDead"><br><br>
+
+			<label for="cap">Capacity:</label>
+			<input type="text" name="capacity" id="cap"> <br><br>
+
+			<label for="description">Description:</label>
+			<input type="text" name="descrip" id="description"><br><br>
+
+			
+		</form>
+		<a href="professor_homepage.html"><button>Add</button><a>
+		<footer style="position:absolute; bottom:0">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+	</body>
+</html>
+
+
+
