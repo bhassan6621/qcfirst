@@ -1,0 +1,111 @@
+<!-- TODO: remove all css from tags to css file-->
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>QCFirst</title>
+	</head>
+
+  	<body>
+    	<nav>
+			<img src="img/Logo.png" alt="Queens College" style="float:left">
+				<div id="topnav-right">
+					<a href="Student_searchClass.html">Add Class</a>
+					<a href="#curr-classes">View Class</a> 
+					<a href="Login_professor.html"><button>Sign Out</button><a>
+				</div>
+    	</nav>
+
+    	<header style="position:relative; text-align:center;">
+			<img src="img/Image_comp.png" alt="people on computer" style="width:100%">
+			<h1 style="position:absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);">Student Home Page</h1> 
+        </header>
+    	
+		<section id="curr-classes">
+      		<h1>Enrolled Classes</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Course Name</th>
+						<th>Course Number</th>
+						<th>Section</th>
+                        <th>Date</th>
+						<th>Time</th>
+						<th>Professor</th>
+						<th>Course Description</th>
+				  	</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>CS111</td>
+						<td>200862</td>
+                        <td>22</td>
+                        <td>M/W</td>
+						<td>12pm-1:15pm</td>
+						<td>Alex Ryba</td>
+						<td><button name="course-info" class="course-info" type="submit">INFO</button></td>
+				  	</tr>
+				  	<tr>
+						<td>C++</td>
+						<td>200843</td>
+                        <td>12</td>
+                        <td>M/W</td>
+						<td>9am-11:15am</td>
+						<td>Waxman</td>
+						<td><button name="course-info" class="course-info" type="submit">INFO</button></td>
+					</tr>
+					<tr>
+						<td>Python</td>
+						<td>405662</td>
+                        <td>01</td>
+                        <td>M/W</td>
+						<td>11am-1:15pm</td>
+						<td>Robert Lynn</td>
+						<td><button name="course-info" class="course-info" type="submit">INFO</button></td>
+					</tr>
+					<tr>
+						<td>CS331</td>
+						<td>4529122</td>
+                        <td>05</td>
+                        <td>M/W</td>
+						<td>8pm-10pm</td>
+						<td>Daniel Levitt</td>
+						<td><button name="course-info" class="course-info" type="submit">INFO</button></td>
+				  	</tr>
+				</tbody>
+			</table>
+		</section>
+        
+      	<a style="float:center" href="Student_searchClass.html"><button>Add a Course</button></a>
+    
+    	<section >  
+      		<div style="float:left">
+				<h3>Links</h3>
+				<ul>
+				  <li><a href="url">link text</a></li>
+				  <li><a href="url">link text</a></li>
+				  <li><a href="url">link text</a></li>
+				  <li><a href="url">link text</a></li>
+				</ul>
+			</div>
+
+			<div class="contact" style="float:right">
+				<h3>Contact Us</h3>
+				<form name="contactform" class="form"  method="post">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name">
+
+					<label for="message">Message</label>
+					<input type="text" name="message" id="message">
+
+					<a href=""><button name="submit" id="submit" type="submit">Submit</button><a>
+				</form>
+			</div>
+    	</section>
+      
+		<footer style="position:absolute; bottom:0">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+	</body>
+</html>
