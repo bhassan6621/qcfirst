@@ -7,21 +7,21 @@
 	</head>
   
   	<body>
-    	<header>
-    		<div class="topnav">  <!--create navbar with logo on teh left-->
+    		<header>
+    			<div class="topnav">  <!--create navbar with logo on teh left-->
 				<img src="img/Logo.png" alt="Queens College" style="float:left">
 				<div id="nav" style="float:right">
 					<a href="Add_course.html">Add Class</a>  <!--redirects the user to the add class page-->
 					<a href="#viewClass">View Class</a>  <!--show the table to the users-->
 					<a href="Homepage.html"><button>Sign Out</button></a>  <!--sign out the user and redirects them to the homepage-->
 				</div>
-      		</div>
-    	</header><br>
+      			</div>
+    		</header><br>
 
-    	<div id="banner" style="position:relative; text-align:center;">  <!--TODO: add the styling to the CSS-->
+    		<div id="banner" style="position:relative; text-align:center;">  <!--TODO: add the styling to the CSS-->
 			<img src="img/Image_comp.png" alt="people on computer" style="width:100%">
 			<h1 style="position:absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);">Professor Home page</h1> 
-    	</div><br>
+    		</div><br>
     	
 		<div id="viewClass"> 
       		<h1>Courses Teaching</h1>
@@ -39,52 +39,52 @@
 				</thead>
 
 				<tbody>
-					<tr>
-						<td>C++</td>
-						<td>200862</td>
-						<td>10am-11am</td>
-						<td>Mon/Wed</td>
-						<td>40</td>
-						<td>Pre-req math courses</td>
-						<td><a href="professor_homepage.html"><button name="delete" id="submit" type="submit">Delete</button></td><a> <!--the professor can delete a course, and the page reloads with updates-->
+					<tr class="row">
+						<td class="col">C++</td>
+						<td class="col">200862</td>
+						<td class="col">10am-11am</td>
+						<td class="col">Mon/Wed</td>
+						<td class="col">40</td>
+						<td class="col">Pre-req math courses</td>
+						<td class="col"><a href="professor_homepage.html"><button name="delete" id="submit" type="submit">Delete</button></td><a> <!--the professor can delete a course, and the page reloads with updates-->
 				  	</tr>
-				  	<tr>
-						<td>Java</td>
-						<td>275678</td>
-						<td>10am-11am</td>
-						<td>Mon/Wed</td>
-						<td>40</td>
-						<td>Pre-req math courses</td>
-						<td><a href="professor_homepage.html"><button name="delete" id="submit" type="submit">Delete</button></td><a>
+				  	<tr class="row">
+						<td class="col">Java</td>
+						<td class="col">275678</td>
+						<td class="col">10am-11am</td>
+						<td class="col">Mon/Wed</td>
+						<td class="col">40</td>
+						<td class="col">Pre-req math courses</td>
+						<td class="col"><a href="professor_homepage.html"><button name="delete" id="submit" type="submit">Delete</button></td><a>
 					</tr>
-					<tr>
-						<td>Software Engineering</td>
-						<td>564647</td>
-						<td>10am-11am</td>
-						<td>Mon/Wed</td>
-						<td>40</td>
-						<td>Pre-req math courses</td>
-						<td><a href="professor_homepage.html"><button name="delete" id="submit" type="submit">Delete</button><a></td>
+					<tr class="row">
+						<td class="col">Software Engineering</td>
+						<td class="col">564647</td>
+						<td class="col">10am-11am</td>
+						<td class="col">Mon/Wed</td>
+						<td class="col">40</td>
+						<td class="col">Pre-req math courses</td>
+						<td class="col"><a href="professor_homepage.html"><button name="delete" id="submit" type="submit">Delete</button><a></td>
 					</tr>
-					<tr>
-						<td>Discrete Structures</td>
-						<td>748442</td>
-						<td>10am-11am</td>
-						<td>Mon/Wed</td>
-						<td>40</td>
-						<td>Pre-req math courses</td>
-						<td><a href="professor_homepage.html"><button name="delete" id="submit" type="submit">Delete</button></td><a>
+					<tr class="row">
+						<td class="col">Discrete Structures</td>
+						<td class="col">748442</td>
+						<td class="col">10am-11am</td>
+						<td class="col">Mon/Wed</td>
+						<td class="col">40</td>
+						<td class="col">Pre-req math courses</td>
+						<td class="col"><a href="professor_homepage.html"><button name="delete" id="submit" type="submit">Delete</button></td><a>
 				  	</tr>
 				</tbody>
 			</table>
 		</div>
         
-    	<div id="add" style="float:center">
-      		<a href="Add_course.html"><button>Add Course</button></a> <!--redirects the user to the add class page-->
-    	</div>
+    		<div id="add" style="float:center">
+      			<a href="Add_course.html"><button>Add Course</button></a> <!--redirects the user to the add class page-->
+    		</div>
     
-    	<section class="linkContact">  
-      		<div id="links" style="float:left">
+    		<section class="linkContact">  
+      			<div id="links" style="float:left">
 				<h3>Links</h3> <!--TODO: add the appropriate links to the IT and other info-->
 				<ul>
 					<li><a href="url">link text</a></li>
@@ -107,7 +107,7 @@
 				</form>
 			</div>
      
-    	</section>
+    		</section>
       
 		<footer style="position:absolute; bottom:0">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
 	</body>
