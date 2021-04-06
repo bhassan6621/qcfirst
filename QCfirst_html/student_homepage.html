@@ -1,13 +1,13 @@
-<!-- TODO: remove all css from tags to css file-->
+<!-- TODO: remove all style attributes from tags to css file-->
 
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<title>QCFirst</title>
 	</head>
-
   	<body>
     		<nav>
 			<img src="img/Logo.png" alt="Queens College" style="float:left">
@@ -24,65 +24,66 @@
         	</header>
     	
 		<section id="curr-classes">
+			<!-- Displays all currently enrolled classes -->
       		<h1>Enrolled Classes</h1>
-			<table>
+			<table class="container">
 				<thead>
-					<tr>
-						<th>Course Name</th>
-						<th>Course Number</th>
-						<th>Section</th>
-                        			<th>Date</th>
-						<th>Time</th>
-						<th>Professor</th>
-						<th>Course Description</th>
+					<tr class="row">
+						<th class="col">Course Name</th>
+						<th class="col">Course Number</th>
+						<th class="col">Section</th>
+                        <th class="col">Date</th>
+						<th class="col">Time</th>
+						<th class="col">Professor</th>
+						<th class="col">Course Description</th>
 				  	</tr>
 				</thead>
 
 				<tbody>
-					<tr>
-						<td>CS111</td>
-						<td>200862</td>
-                        			<td>22</td>
-                        			<td>M/W</td>
-						<td>12pm-1:15pm</td>
-						<td>Alex Ryba</td>
-						<td><button name="course-info" class="course-info" type="submit">INFO</button></td>
+					<tr class="row">
+						<td class="col">CS111</td>
+						<td class="col">200862</td>
+                        <td class="col">22</td>
+            			<td class="col">M/W</td>
+						<td class="col">12pm-1:15pm</td>
+						<td class="col">Alex Ryba</td>
+						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
 				  	</tr>
-				  	<tr>
-						<td>C++</td>
-						<td>200843</td>
-                        			<td>12</td>
-                        			<td>M/W</td>
-						<td>9am-11:15am</td>
-						<td>Waxman</td>
-						<td><button name="course-info" class="course-info" type="submit">INFO</button></td>
+				  	<tr class="row">
+						<td class="col">C++</td>
+						<td class="col">200843</td>
+                        <td class="col">12</td>
+                        <td class="col">M/W</td>
+						<td class="col">9am-11:15am</td>
+						<td class="col">Waxman</td>
+						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
 					</tr>
-					<tr>
-						<td>Python</td>
-						<td>405662</td>
-						<td>01</td>
-						<td>M/W</td>
-						<td>11am-1:15pm</td>
-						<td>Robert Lynn</td>
-						<td><button name="course-info" class="course-info" type="submit">INFO</button></td>
+					<tr class="row">
+						<td class="col">Python</td>
+						<td class="col">405662</td>
+						<td class="col">01</td>
+						<td class="col">M/W</td>
+						<td class="col">11am-1:15pm</td>
+						<td class="col">Robert Lynn</td>
+						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
 					</tr>
-					<tr>
-						<td>CS331</td>
-						<td>4529122</td>
-						<td>05</td>
-						<td>M/W</td>
-						<td>8pm-10pm</td>
-						<td>Daniel Levitt</td>
-						<td><button name="course-info" class="course-info" type="submit">INFO</button></td>
+					<tr class="row">
+						<td class="col">CS331</td>
+						<td class="col">4529122</td>
+						<td class="col">05</td>
+						<td class="col">M/W</td>
+						<td class="col">8pm-10pm</td>
+						<td class="col">Daniel Levitt</td>
+						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
 				  	</tr>
 				</tbody>
 			</table>
 		</section>
         
-      		<a style="float:center" href="Student_searchClass.html"><button>Add a Course</button></a>
-    
-    		<section class="info">  
-      			<div id="links" style="float:left">
+      	<a style="float:center" href="Student_searchClass.html"><button>Add a Course</button></a>
+
+    	<section class="info">  
+      		<div id="links" style="float:left">
 				<h3>Links</h3>
 				<ul>
 					<li><a href="url">link text</a></li>
@@ -104,7 +105,7 @@
 					<a href=""><button name="submit" id="submit" type="submit">Submit</button><a>
 				</form>
 			</div>
-    		</section>
+    	</section>
       
 		<footer style="position:absolute; bottom:0">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
 	</body>
