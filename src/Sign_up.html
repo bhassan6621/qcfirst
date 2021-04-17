@@ -6,15 +6,18 @@
 		<title>QCFirst</title>
 	</head>
   
-	<body>
+	<body  class="contain">
+		<header>
+			<img src="img/Logo.png"  alt="Queens College" style="float:left">
+		</header>
 		<h1>QCFirst Sign Up</h1>
 		<h3>Fill out the whole information</h3>
 		<h4>If you are an instructor, click the instructor button</h4> <!-- TODO: make the buttons clickable and also make the program recognize difference between the professor and students' CUNYID-->
 		<h4>If you are a student, click the student button</h4>
-		<button name="instructor" id="instruc" type="select">Instructor</button>
-		<button name="instructor" id="stud" type="select">Student</button>
+		<button  id="instruc" name="instructor" type="button">Instructor</button>
+		<button id="stud" name="instructor"  type="button">Student</button><br><br>
 		<div class="SignUp">
-			<form name="signupform" class="form-signup"  method="post">
+			<form name="signupForm" class="form-signUp"  method="post">
 				<label for="firstName">First Name:</label>
 				<input type="text" name="name" id="firstName">
 
