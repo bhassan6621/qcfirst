@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<title>QCFirst</title>
+	</head>
+  
+	<body>
+    		<nav>
+			<img src="img/Logo.png" alt="Queens College" style="float:left">
+			<a style="float:right" href="Index.html"><button>Sign Out</button></a>
+    		</nav> <br>
+
+        	<section id="search-form">
+		<!-- TODO: align labels and inputs vertically in css & remove style attributes -->
+			<h1>Search For a Class</h1>
+			<form name="searchClass" class="searchClassForm"  method="post">
+				<label for="courseName">Course Name:</label>
+				<input type="text" name="name" id="courseName"> 
+
+				<label for="courseNum">Course Number:</label>
+				<input type="text" name="name" id="courseNum"> 
+
+				<label for="semester">Semester:</label>
+					<select name="semester" id="semester">
+						<option value="spring">Spring</option>
+						<option value="summer">Summer</option>
+						<option value="fall">Fall</option>
+						<option value="winter">Winter</option>
+					</select>
+			</form>
+            		<button>Search</button>
+        	</section>
+
+        	<section id="search-results">
+            		<h1>Course Name</h1>
+            		<table class="container">
+				<thead>
+					<tr class="row">
+						<th class="col">Course Number</th>
+						<th class="col">Class Date</th>
+						<th class="col">Time</th>
+                        			<th class="col">Instructor</th>
+						<th class="col">Capacity</th>
+						<th class="col">Enrollment Deadline</th>
+						<!-- If student clicks INFO then pop up screen with description appears -->
+						<th class="col">Course Description</th> 
+                        			<th class="col">Enroll</th>
+				  	</tr>
+				</thead>
+
+				<tbody>
+					<tr class="row">
+						<td class="col">200862</td>
+						<td class="col">M/W</td>
+						<td class="col">12pm-1:15pm</td>
+						<td class="col">Alex Ryba</td>
+						<td class="col">56</td>
+						<td class="col">09/22/2021</td>
+						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
+						<td class="col"><input type="checkbox" id="isEnroll" name="isEnroll"></td>
+                			</tr>
+				  	<tr class="row">
+						<td class="col">200862</td>
+						<td class="col">M/W</td>
+						<td class="col">12pm-1:15pm</td>
+						<td class="col">Alex Ryba</td>
+						<td class="col">56</td>
+						<td class="col">09/22/2021</td>
+						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
+                        			<td class="col"><input type="checkbox" id="isEnroll" name="isEnroll"></td>
+					</tr>
+					<tr class="row">
+						<td class="col">200862</td>
+						<td class="col">M/W</td>
+						<td class="col">12pm-1:15pm</td>
+						<td class="col">Alex Ryba</td>
+						<td class="col">56</td>
+						<td class="col">09/22/2021</td>
+						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
+                        			<td class="col"><input type="checkbox" id="isEnroll" name="isEnroll"></td>
+					</tr>
+					<tr class="row">
+						<td class="col">200862</td>
+						<td class="col">M/W</td>
+						<td class="col">12pm-1:15pm</td>
+						<td class="col">Alex Ryba</td>
+						<td class="col">56</td>
+						<td class="col">09/22/2021</td>
+						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
+						<td class="col"><input type="checkbox" id="isEnroll" name="isEnroll"></td>
+				  	</tr>
+				</tbody>
+			</table>
+			<!-- once enroll is pressed, class will be added to student_homepage -->
+            		<button>Enroll</button>
+        	</section>
+    		<footer style="position:absolute; bottom:0">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+	</body>
+</html>
+<!--id=isEnroll is duplicate, and input tags need labels tags-->

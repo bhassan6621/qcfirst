@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>QCFirst</title>
+	</head>
+  
+	<body class="addBody"> <!--TODO: the information of added course show up in the students search and also show up in the course teaching table that is on professor homepage for the instructors-->
+		<header>
+			<div class="topNav" > <!--header with logo and sign out button-->
+				<img src="img/Logo.png" alt="Queens College">
+				<div id="signOut">
+					<a href="Index.html"><button name="signOut" type="submit">Sign Out</button></a> <!--logs out the user and redirect them to the professor log in-->
+				</div>
+			</div>
+		</header><br>
+
+		<h1>Add Course</h1> 
+		<form name="courseForm" class="form"  method="post"><!--form to add the class to the student search as well as it show up in the professor course teaching table-->
+			<label for="courseName">Course Name:</label>
+			<input type="text" name="name" id="courseName"> <br><br>
+
+			<label for="courseId">Course ID:</label>
+			<input type="text" name="id" id="courseId"><br><br>
+
+			<label for="semester">Semester:</label>
+			<select name="semester" id="semester"> <!--drop down list with all the semesters listed-->
+  				<option value="spring">Spring</option>
+				<option value="summer">Summer</option>
+				<option value="fall">Fall</option>
+				<option value="winter">Winter</option>
+			</select><br><br>
+			
+
+			<label for="department">Department:</label>
+			<select name="department" id="department"> <!--drop down list with all the departments-->
+  				<option value="computer science">Computer Science</option>
+				<option value="math">Math</option>
+				<option value="biology">Biology</option>
+				<option value="art">Art</option>
+			</select><br><br>
+			
+
+			<label for="instructor">Instructor:</label> <!--TODO: instructor can only put their own name, so they can't add class for other professors-->
+			<input id="instructor" name="instructor" type="text"> <br><br>
+
+			<label for="startTime">Start Time:</label> <!--time the class starts-->
+			<input id="startTime" name="time" type="time" min="9:00" max="9:00" placeholder="hh:mm"><br><br> <!--placeholder because safari doesn't show the type of date and time in input-->
+			
+			<label for="endTime">End Time:</label><!--time the class ends-->
+			<input id="endTime" name="time" type="time" min="9:00" max="9:00" placeholder="hh:mm"><br><br>
+			
+			<label for="days">Days:</label>
+			<input id="days" name="day" type="text"> <br><br>
+
+			<label for="enrollDead">Enrollment Deadline:</label>
+			<input id="enrollDead" name="enroll" type="date" placeholder="mm/dd/yyyy"><br><br>
+
+			<label for="cap">Capacity:</label>
+			<input id="cap" name="capacity" type="text"> <br><br>
+
+			<label for="description">Description:</label>
+			<input id="description" name="description" type="text" ><br><br>
+		</form>
+
+		<a href="professor_homepage.html"><button>Add</button></a> <!--after adding class, redirects the user to the homepage so they can see the update course and can delete it-->
+		<footer >&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+
+
+	</body>
+</html>
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>QCFirst</title>
+	</head>
+  
+	<body>
+	<header class="logContainer">
+		<img src="img/Logo.png"  alt="Queens College">
+	</header>
+		<h1>QCFirst Log In</h1>
+		<h3> Log in with your Qmail Credentials</h3>
+		<div class="logIn">  <!-- Takes the username and password from the students -->
+			<form name="loginForm" class="form-signin"  method="post">  <!-- TODO: only let teh user log in if all the required input are filled and with required info-->
+				<label for="QCFirstUsername">Username</label>
+				<input type="text" name="username" id="QCFirstUsername" value="@qmail.cuny.edu"> <br><br>
+
+				<label for="QCFirstPassword">Password</label>
+				<input type="password" name="password" id="QCFirstPassword"><br><br> <!-- TODO: password validation and restriction -->
+			</form>
+			<a href="student_homepage.html"> <button>Log in</button></a> <!-- redirects the students to the student homepage -->
+		</div><br>
+		<footer>&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+  	</body>
+  
+</html>

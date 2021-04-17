@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+body.logContainer{
+    /*max-width: 550px;
+    height: 100vh; viewport height
+    border: 1px solid black;*/
+    margin: 0 auto;
+    text-align:center;
+    padding:25px 5px;
+    background-color:#5F9EA0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+button#log{
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    background-color:#2F4F4F ;
+}
+footer{
+    width:100%;
+    background-color:black;
+    color:white;
+    position:absolute;
+    bottom:0;
+}
+header.contain{
+    max-width: 500px;
+    height: 100vh; /*viewport height*/
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align:center;
+    padding:15px 5px;
+    background-color:#5F9EA0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+header.contain button{
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    background-color:#2F4F4F ;
+}
+div.ProTopNav {
+    background-color: #A9A9A9;
+    font-size:1rem;
+}
+
+/*header a{
+  color:white;
+}*/
+div.ProTopNav img{
+    float:left;
+}
+div#ProNav{
+    float:right;
+}
+div#ProNav a button{
+    background-color: #2F4F4F;
+    color: white;
+    text-align: center;
+    border-radius:10px;
+}
+#banner{
+    position:relative;
+    text-align:center;
+}
+#pic{
+    width:100%;
+}
+#banner>h1{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#viewClass{
+    background-color:white;
+}
+#viewClass > h1{
+    text-align: center;
+}
+.classTable {
+    border: 1px solid black;
+}
+
+.classTable th, td{
+	 border: 1px solid black;
+}
+.classTable thead tr{
+    background-color: #2F4F4F;
+    color: white;
+}
+.classTable tbody a > button{
+    border-radius: 10px;
+    background-color: #2F4F4F;
+    color: white;
+}
+#add{
+    display: flex;
+    justify-content: center;
+}
+#add button{
+    width:170px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #2F4F4F;
+    color: white;
+    text-align:center;
+    font-size:20px;
+}
+.linkContact{
+    background-color:#5F9EA0;
+}
+#ProLinks{
+    float:left;
+}
+.ProContact{
+    float:right;
+}
+#signOut{
+    float:right;
+}
+#signOut a >button{
+    width:60px;
+    height:30px;;
+    font-size:10px;
+    background-color: #2F4F4F;
+    color: white;
+    text-align: center;
+    border-radius:10px;;
+}
+/*body{
+  text-align:center;
+}*/
+.addBody h1{
+    text-align:center;
+}
+.addBody input{
+    border: medium ridge #000000;
+    background-color:#DCDCDC;
+    color:black;
+}
+
+.addBody input::placeholder{
+    color:white;
+}
+.addBody form+a >button{
+    justify-content:right;
+    width:90px;
+    height:40px;
+    color:white;
+    font-size:20px;
+    background-color:#2F4F4F;
+}
