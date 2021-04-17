@@ -181,7 +181,7 @@ div#proNav button{
 	float:right;
 	width:60px;
 	height:30px;;
-	font-size:12px;
+	font-size:11px;
 	background-color: #2F4F4F;
 	color: white;
 	text-align: center;
@@ -221,6 +221,7 @@ div#proNav button{
 }
 .form textarea{
 	background-color:#DCDCDC;
+	vertical-align:top;
 }
 footer{
 	clear:both;
