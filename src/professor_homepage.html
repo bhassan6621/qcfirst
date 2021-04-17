@@ -9,21 +9,23 @@
 	</head>
   
   	<body>
-    		<header class="proTopNav">
+    		<nav class="proTopNav">
     			  <!--create navbar with logo on teh left-->
-			<img src="img/Logo.png" alt="Queens College">
+			<div class="logo" onclick="window.location.href='Index.html'">
+				<img src="img/Logo.png" alt="Queens College">
+			</div>
 			<div id="proNav">
 				<a href="Add_course.html">Add Class</a>  <!--redirects the user to the add class page-->
 				<a href="#viewClass">View Class</a>  <!--show the table to the users-->
 				<button onclick="location.href='Index.html'">Sign Out</button>  <!--sign out the user and redirects them to the homepage-->
 
 			</div>
-    		</header><br>
+    		</nav>
 
-    		<div id="banner">  <!--TODO: add the styling to the CSS-->
+    		<header id="banner">  <!--TODO: add the styling to the CSS-->
 			<img src="img/Image_comp.png" id="pic" alt="people on computer">
 			<h1>Professor Home page</h1> 
-    		</div><br>
+    		</header><br>
     	
 		<div id="viewClass"> 
 			<h1>Courses Teaching</h1>
@@ -36,6 +38,7 @@
 						<th class="col">Days</th>
 						<th class="col">Capacity</th>
 						<th class="col">Description</th>
+						<th class="col">Roster</th><!--This will show the roster of different classes to the professor-->
 						<th class="col">Delete</th> <!--TODO: after deletion, an alert pops up for confirmation, and delete the course from the table as well as from the students' search-->
 					</tr>
 				</thead>
@@ -48,6 +51,7 @@
 						<td class="col">Mon/Wed</td>
 						<td class="col">40</td>
 						<td class="col">Pre-req math courses</td>
+						<td class="col"><button name="roster" class="popup" onclick="myFunction()">Students<span class="popuptext" id="myPopup"> Popup text.</span></button></td><!--TODO: using javascript the pop will apear containing students enrolled in class by clickng the button--> 
 						<td class="col"><button name="delete" type="submit" oncick="location.href='professor_homepage.html'">Delete</button></td> <!--the professor can delete a course, and the page reloads with updates-->
 					</tr>
 					<tr class="row">
@@ -57,6 +61,7 @@
 						<td class="col">Mon/Wed</td>
 						<td class="col">40</td>
 						<td class="col">Pre-req math courses</td>
+						<td class="col"><button name="roster" class="popup" onclick="myFunction()">Students<span class="popuptext" id="myPopup"> Popup text.</span></button></td>
 						<td class="col"><button name="delete" type="submit" oncick="location.href='professor_homepage.html'">Delete</button></td>
 					</tr>
 					<tr class="row">
@@ -66,6 +71,7 @@
 						<td class="col">Mon/Wed</td>
 						<td class="col">40</td>
 						<td class="col">Pre-req math courses</td>
+						<td class="col"><button name="roster" class="popup" onclick="myFunction()">Students<span class="popuptext" id="myPopup"> Popup text.</span></button></td>
 						<td class="col"><button name="delete" type="submit" oncick="location.href='professor_homepage.html'">Delete</button></td>
 					</tr>
 					<tr class="row">
@@ -75,6 +81,7 @@
 						<td class="col">Mon/Wed</td>
 						<td class="col">40</td>
 						<td class="col">Pre-req math courses</td>
+						<td class="col"><button name="roster" class="popup" onclick="myFunction()">Students<span class="popuptext" id="myPopup"> Popup text.</span></button></td>
 						<td class="col"><button name="delete" type="submit" oncick="location.href='professor_homepage.html'">Delete</button></td>
 					</tr>
 				</tbody>
@@ -82,7 +89,7 @@
 		</div><br>
         
     		<div id="add">
-      			<button onclick="location.href='Add_course.html'">Add Course</button> <!--redirects the user to the add class page-->
+      			<button onclick="location.href='Add_course.html'">Add Additional Course</button> <!--redirects the user to the add class page-->
     		</div><br>
     
     		<div class="linkContact">  
