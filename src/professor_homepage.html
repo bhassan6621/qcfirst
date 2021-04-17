@@ -13,18 +13,18 @@
 				<div id="nav" style="float:right">
 					<a href="Add_course.html">Add Class</a>  <!--redirects the user to the add class page-->
 					<a href="#viewClass">View Class</a>  <!--show the table to the users-->
-					<a href="Homepage.html"><button>Sign Out</button></a>  <!--sign out the user and redirects them to the homepage-->
+					<a href="Homepage.html">Sign Out</a>  <!--sign out the user and redirects them to the homepage-->
 				</div>
       		</div>
-    	</header><br>
+    	</header>
 
     	<div id="banner" style="position:relative; text-align:center;">  <!--TODO: add the styling to the CSS-->
 			<img src="img/Image_comp.png" alt="people on computer" style="width:100%">
 			<h1 style="position:absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);">Professor Home page</h1> 
-    	</div><br>
+    	</div>
     	
 		<div id="viewClass"> 
-      		<h1>Courses Teaching</h1>
+      		<h2>Courses Teaching</h2>
 			<table class="table">  <!--table that consists all the added classes by the professor-->
 				<thead>
 					<tr>
@@ -80,7 +80,7 @@
 		</div>
         
     	<div id="add" style="float:center">
-      		<a href="Add_course.html"><button>Add Course</button></a> <!--redirects the user to the add class page-->
+      		<button onclick="location.href='Add_course.html'">Add Course</button> <!--redirects the user to the add class page-->
     	</div>
     
     	<section class="linkContact">  
@@ -98,12 +98,12 @@
 				<h3>Contact Us</h3>
 				<form name="contactform" class="form"  method="post">
 					<label for="name">Name</label>
-					<input type="text" name="name" id="name"> <br><br>
+					<input type="text" name="name" id="name"> 
 
 					<label for="message">Message</label>
-					<input type="text" name="message" id="message"><br><br>
+					<input type="text" name="message" id="message">
 
-					<a href="professor_homepage.html"><button name="submit" id="submit" type="submit">Submit</button><a> <!--after submitting the form, reloads the same page-->
+					<button name="submit" id="submit" type="submit">Submit</button> <!--after submitting the form, reloads the same page-->
 				</form>
 			</div>
      

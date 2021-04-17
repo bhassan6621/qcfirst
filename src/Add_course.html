@@ -11,17 +11,17 @@
 			<div class="topnav" > <!--header with logo and sign out button-->
 				<img src="img/Logo.png" alt="Queens College" style="float:left">
 				<div id="signOut" style="float:right">
-					<a href="Login_professor.html"><button name="signOut" id="signOut" type="submit">Sign Out</button><a> <!--logs out the user and redirect them to the professor log in-->
+					<a href="Login_professor.html">Sign Out<a> <!--logs out the user and redirect them to the professor log in-->
 				</div>
-		</header><br>
+		</header>
 
 		<h1>Add Course</h1> 
 		<form name="courseForm" class="form"  method="post"><!--form to add the class to the student search as well as it show up in the professor course teaching table-->
 			<label for="courseName">Course Name:</label>
-			<input type="text" name="name" id="courseName"> <br><br>
+			<input type="text" name="name" id="courseName"> 
 
 			<label for="courseId">Course ID:</label>
-			<input type="text" name="id" id="courseId"><br><br>
+			<input type="text" name="id" id="courseId">
 
 			<label for="semester">Semester:</label>
 			<select name="semester" id="semester"> <!--drop down list with all the semseters listed-->
@@ -29,7 +29,7 @@
 				<option value="summer">Summer</option>
 				<option value="fall">Fall</option>
 				<option value="winter">Winter</option>
-			</select><br><br>
+			</select>
 			
 
 			<label for="department">Department:</label>
@@ -38,32 +38,32 @@
 				<option value="math">Math</option>
 				<option value="biology">Biology</option>
 				<option value="art">Art</option>
-			</select><br><br>
+			</select>
 			
 
 			<label for="instructor">Instructor:</label> <!--TODO: instructor can only put their own name, so they can't add class for other professors-->
-			<input type="text" name="instructor" id="instructor"> <br><br>
+			<input type="text" name="instructor" id="instructor">
 
 			<label for="startTime">Start Time:</label> <!--time the class starts-->
-			<input type="time" name="time" id="startTime" min="9:00" max="9:00" placeholder="hh:mm"><br><br>
+			<input type="time" name="time" id="startTime" min="9:00" max="9:00" placeholder="hh:mm">
 			
 			<label for="endTime">End Time:</label><!--time the class ends-->
-			<input type="time" name="time" id="endTime" min="9:00" max="9:00" placeholder="hh:mm"><br><br>
+			<input type="time" name="time" id="endTime" min="9:00" max="9:00" placeholder="hh:mm">
 			
 			<label for="days">Days:</label>
-			<input type="text" name="day" id="days"> <br><br>
+			<input type="text" name="day" id="days"> 
 
 			<label for="enrollDead">Enrollment Deadline:</label>
-			<input type="date" name="enroll" id="enrollDead" placeholder="mm/dd/yyyy"><br><br>
+			<input type="date" name="enroll" id="enrollDead" placeholder="mm/dd/yyyy">
 
 			<label for="cap">Capacity:</label>
-			<input type="text" name="capacity" id="cap"> <br><br>
+			<input type="text" name="capacity" id="cap"> 
 
 			<label for="description">Description:</label>
-			<input type="text" name="descrip" id="description"><br><br>
+			<input type="text" name="descrip" id="description">
 		</form>
 
-		<a href="professor_homepage.html"><button>Add</button><a> <!--after adding class, redirects the user to the homepage so they can see the update course and can delete it-->
+		<button onclick="location.href='professor_homepage.html'">Add</button> <!--after adding class, redirects the user to the homepage so they can see the update course and can delete it-->
 		<footer style="position:absolute; bottom:0">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
 	
 	</body>
