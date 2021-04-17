@@ -7,10 +7,12 @@ html, body{
 button{
 	cursor: pointer;
 }
-input:focus,
-input:active {
+input:focus, input:active {
 	border-color: transparent;
 	border: 5px solid #1c87c9;
+}
+.logo, #logo{
+	cursor:pointer;
 }
 nav img{
 	float:left;
