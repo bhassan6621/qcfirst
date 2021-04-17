@@ -4,29 +4,30 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css" >
 		<title>QCFirst</title>
 	</head>
   
   	<body>
-    		<header>
-    			<div class="topNav">  <!--create navbar with logo on teh left-->
-				<img src="img/Logo.png" alt="Queens College">
-				<div id="nav">
-					<a href="Add_course.html">Add Class</a>  <!--redirects the user to the add class page-->
-					<a href="#viewClass">View Class</a>  <!--show the table to the users-->
-					<a href="Homepage.html">Sign Out</a>  <!--sign out the user and redirects them to the homepage-->
-				</div>
-      		</div>
-    	</header>
+    		<header class="proTopNav">
+    			  <!--create navbar with logo on teh left-->
+			<img src="img/Logo.png" alt="Queens College">
+			<div id="proNav">
+				<a href="Add_course.html">Add Class</a>  <!--redirects the user to the add class page-->
+				<a href="#viewClass">View Class</a>  <!--show the table to the users-->
+				<button onclick="location.href='Index.html'">Sign Out</button>  <!--sign out the user and redirects them to the homepage-->
 
-    	<div id="banner" style="position:relative; text-align:center;">  <!--TODO: add the styling to the CSS-->
-			<img src="img/Image_comp.png" alt="people on computer" style="width:100%">
-			<h1 style="position:absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);">Professor Home page</h1> 
-    	</div>
+			</div>
+    		</header><br>
+
+    		<div id="banner">  <!--TODO: add the styling to the CSS-->
+			<img src="img/Image_comp.png" id="pic" alt="people on computer">
+			<h1>Professor Home page</h1> 
+    		</div><br>
     	
 		<div id="viewClass"> 
-      		<h2>Courses Teaching</h2>
-			<table class="table">  <!--table that consists all the added classes by the professor-->
+			<h1>Courses Teaching</h1>
+			<table class="classTable">  <!--table that consists all the added classes by the professor-->
 				<thead>
 					<tr class="row">
 						<th class="col">Course Name</th> <!-- make the table bootsrap RWD-->
@@ -36,7 +37,7 @@
 						<th class="col">Capacity</th>
 						<th class="col">Description</th>
 						<th class="col">Delete</th> <!--TODO: after deletion, an alert pops up for confirmation, and delete the course from the table as well as from the students' search-->
-				  	</tr>
+					</tr>
 				</thead>
 
 				<tbody>
@@ -47,16 +48,16 @@
 						<td class="col">Mon/Wed</td>
 						<td class="col">40</td>
 						<td class="col">Pre-req math courses</td>
-						<td class="col"><a href="professor_homepage.html"><button name="delete" type="submit">Delete</button></a></td> <!--the professor can delete a course, and the page reloads with updates-->
-				  	</tr>
-				  	<tr class="row">
+						<td class="col"><button name="delete" type="submit" oncick="location.href='professor_homepage.html'">Delete</button></td> <!--the professor can delete a course, and the page reloads with updates-->
+					</tr>
+					<tr class="row">
 						<td class="col">Java</td>
 						<td class="col">275678</td>
 						<td class="col">10am-11am</td>
 						<td class="col">Mon/Wed</td>
 						<td class="col">40</td>
 						<td class="col">Pre-req math courses</td>
-						<td class="col"><a href="professor_homepage.html"><button name="delete" type="submit">Delete</button></a></td>
+						<td class="col"><button name="delete" type="submit" oncick="location.href='professor_homepage.html'">Delete</button></td>
 					</tr>
 					<tr class="row">
 						<td class="col">Software Engineering</td>
@@ -65,7 +66,7 @@
 						<td class="col">Mon/Wed</td>
 						<td class="col">40</td>
 						<td class="col">Pre-req math courses</td>
-						<td class="col"><a href="professor_homepage.html"><button name="delete" type="submit">Delete</button></a></td>
+						<td class="col"><button name="delete" type="submit" oncick="location.href='professor_homepage.html'">Delete</button></td>
 					</tr>
 					<tr class="row">
 						<td class="col">Discrete Structures</td>
@@ -74,24 +75,18 @@
 						<td class="col">Mon/Wed</td>
 						<td class="col">40</td>
 						<td class="col">Pre-req math courses</td>
-						<td class="col"><a href="professor_homepage.html"><button name="delete" type="submit">Delete</button></a></td>
-				  	</tr>
+						<td class="col"><button name="delete" type="submit" oncick="location.href='professor_homepage.html'">Delete</button></td>
+					</tr>
 				</tbody>
 			</table>
-		</div>
+		</div><br>
         
-<<<<<<< HEAD
-    	<div id="add" style="float:center">
-      		<button onclick="location.href='Add_course.html'">Add Course</button> <!--redirects the user to the add class page-->
-    	</div>
-=======
     		<div id="add">
-      			<a href="Add_course.html"><button>Add Course</button></a> <!--redirects the user to the add class page-->
-    		</div>
->>>>>>> 4de748f109330aef88750d234d4a0669d1154eb5
+      			<button onclick="location.href='Add_course.html'">Add Course</button> <!--redirects the user to the add class page-->
+    		</div><br>
     
-    		<section class="linkContact">  
-      			<div id="links">
+    		<div class="linkContact">  
+      			<div id="ProLinks">
 				<h3>Links</h3> <!--TODO: add the appropriate links to the IT and other info-->
 				<ul>
 					<li><a href="url">link text</a></li>
@@ -101,24 +96,19 @@
 				</ul>
 			</div>
 
-			<div class="contact">
+			<div class="ProContact">
 				<h3>Contact Us</h3>
 				<form name="contactForm" class="form"  method="post">
 					<label for="name">Name</label>
-					<input type="text" name="name" id="name"> 
+					<input type="text" name="name" id="name"> <br><br>
 
 					<label for="message">Message</label>
-					<input type="text" name="message" id="message">
+					<input type="text" name="message" id="message"><br><br>
 
-<<<<<<< HEAD
-					<button name="submit" id="submit" type="submit">Submit</button> <!--after submitting the form, reloads the same page-->
-=======
-					<a href="professor_homepage.html"><button name="submit" id="submit" type="submit">Submit</button></a> <!--after submitting the form, reloads the same page-->
->>>>>>> 4de748f109330aef88750d234d4a0669d1154eb5
+					<button name="submit" id="submit" type="submit" onclick="location.href='professor_homepage.html'">Submit</button> <!--after submitting the form, reloads the same page-->
 				</form>
 			</div>
-     
-    		</section>
+    		</div>
       
 		<footer>&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
 	</body>
