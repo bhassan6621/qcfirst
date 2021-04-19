@@ -162,11 +162,11 @@ div#proNav button{
 	height: auto;
 	overflow:auto;
 }
-#ProLinks{
+#proLinks{
 	float:left;
 	color:white;
 }
-.ProContact{
+.proContact{
 	float:right;
 	color:white;
 }
