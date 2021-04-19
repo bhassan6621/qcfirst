@@ -1,18 +1,18 @@
 # QCFirst Website
 
 ## Contributors
-Bibi Hassan & Navsangeet Kaur
+* Bibi Hassan & Navsangeet Kaur
+* We both splitted the pages in half. We came togther before the day of the due date of the deliverables and helped each other out, and also discusses the changes and updates that are needed and evalutae each others work.
+* Bibi Hassan: Created the homepage, student homepage, and student search page
+* Navsangeet kaur: Created log in pages for both professor and student, sign up page, professor homepage and add course page
 
 ## Features
  * Responsive Design for mobile, tablet, and desktop
- * Links to get more information about how to use the website
- * Contact information provided
+ * Links to get more information about how to use the website 
+ * Contact form is provided
  * Clear Navigation
  * Geographic information
- * Description
  * Images
-
-
 
 ## Pupose of the Website
 The website lets the students to view the classes that they are enrolled in and add more classes to their schedule.
@@ -32,7 +32,8 @@ It also lets the instructors view the classes that they are teaching, add more c
 
 ## CSS styling for the QCFirst Website
 
-We have created style.css where the css styling for all the pages are included. The id's and classes are unique and distinguished from each other so the styling can be easier to implemented and don't clash with each other. 
+* We have created style.css where the css styling for all the pages are included. The id's and classes are unique and distinguished from each other so the styling can be easier to implemented and don't clash with each other.
+* After implementing the html nd css documents, we see that the website and the visual of the website are quite similar, we tried to implement all the features and content to the website that we put on the visuals.   
 
 ## Visuals of the QCFirst Website
 
