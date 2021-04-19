@@ -20,7 +20,7 @@ It also lets the instructors view the classes that they are teaching, add more c
 
 ## HTML code for the QCFirst Website
   * The following link is where our website is published https://bhassan6621.github.io/qcfirst/src/Index.html
-  There are 8 pages in total in our website:
+  * There are 8 pages in total in our website:
   * First is homepage where we have the logo and it contains the log in button for the students that redirects the students to the student homepage, log in button for the professors that redirects the professors to the professor homepage, sign up button that will let the professors as well as students to sign up for the account. It also contains the links to the IT help desk and other helpful links as well as contact submission.
   * Sign Up page let the students and the professors to create an account if they don't have one.
   * The log in page for students let the students access their account and the information. When the log in button is clicked the students will be redirected to the students homepage.
