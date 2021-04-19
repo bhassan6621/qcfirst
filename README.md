@@ -19,6 +19,7 @@ The website lets the students to view the classes that they are enrolled in and 
 It also lets the instructors view the classes that they are teaching, add more classes to their course management and they can also dealte the courses.
 
 ## HTML code for the QCFirst Website
+  * The following link is where our website is published https://bhassan6621.github.io/qcfirst/src/Index.html
   There are 8 pages in total in our website:
   * First is homepage where we have the logo and it contains the log in button for the students that redirects the students to the student homepage, log in button for the professors that redirects the professors to the professor homepage, sign up button that will let the professors as well as students to sign up for the account. It also contains the links to the IT help desk and other helpful links as well as contact submission.
   * Sign Up page let the students and the professors to create an account if they don't have one.
@@ -29,7 +30,9 @@ It also lets the instructors view the classes that they are teaching, add more c
   * The professor homepage contains the table with the classes that professors are already decided to teach and one of the column contains delete button which will delete the course and remove it from the table. It also consists the sign out button which will log out the user and redirect to the log in, and has add course button available on the same page that redirects the professors to the add course page.
   * The add course page has the inputs where professor can input the course info that they want to show up on the student's search window search, and after entering the whole information they can click the add button and that course will show up on the professor courses teaching table that is on the professor homepage as well as in the students search table. 
 
+## CSS styling for the QCFirst Website
 
+We have created style.css where the css styling for all the pages are included. The id's and classes are unique and distinguished from each other so the styling can be easier to implemented and don't clash with each other. 
 
 ## Visuals of the QCFirst Website
 
