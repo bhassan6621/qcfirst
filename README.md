@@ -33,7 +33,7 @@ It also lets the instructors view the classes that they are teaching, add more c
 ## CSS styling for the QCFirst Website
 
 * We have created style.css where the css styling for all the pages are included. The id's and classes are unique and distinguished from each other so the styling can be easier to implemented and don't clash with each other.
-* After implementing the html nd css documents, we see that the website and the visual of the website are quite similar, we tried to implement all the features and content to the website that we put on the visuals.   
+* After implementing the html nd css documents, we see that the website and the visual of the website are quite similar, we tried to implement all the features and content to the website that we put on the visuals. The only difference we see on our homepage, we wanted to provide more information however during implementation it looked so clustered and we had to remove few things in order to highlight the features. 
 
 ## Visuals of the QCFirst Website
 
