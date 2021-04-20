@@ -3,18 +3,20 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./css/style.css" >
+		<link rel="stylesheet" type="text/css" href="./css/search-class.css" >
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<title>QCFirst</title>
 	</head>
   
 	<body>
     	<nav>
-			<img src="img/Logo.png" alt="Queens College" style="float:left">
-			<a style="float:right" href="Login_professor.html">Sign Out<a>
+			<img class="img-fluid" src="img/Logo.png" alt="Queens College">
+			<a class="btn btn-primary" href="Login_professor.html">Sign Out<a>
     	</nav>
 
-        	<section id="search-form">
-		<!-- TODO: align labels and inputs vertically in css & remove style attributes -->
+		<section id="search-form">
+	<!-- TODO: align labels and inputs vertically in css & remove style attributes -->
 			<h1>Search For a Class</h1>
 			<form name="searchClass" class="searchClassForm"  method="post">
 				<label for="courseName">Course Name:</label>
@@ -31,12 +33,12 @@
 						<option value="winter">Winter</option>
 					</select>
 			</form>
-            		<button>Search</button>
-        	</section>
+			<button class="btn btn-primary">Search</button>
+		</section>
 
         <section id="search-results">
             <h2>Course Name</h2>
-            <table class="container">
+            <table class="classTable container">
 				<thead>
 					<tr class="row">
 						<th class="col">Course Number</th>
@@ -95,9 +97,9 @@
 				</tbody>
 			</table>
 			<!-- once enroll is pressed, class will be added to student_homepage -->
-            		<button>Enroll</button>
+            		<button class="btn btn-primary">Enroll</button>
         	</section>
-    		<footer style="position:absolute; bottom:0">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+    		<footer>&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
 	</body>
 </html>
 <!--id=isEnroll is duplicate, and input tags need labels tags-->

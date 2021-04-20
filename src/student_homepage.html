@@ -5,35 +5,36 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--<link rel="stylesheet" type="text/css" href="style.css" >-->
+		<link rel="stylesheet" type="text/css" href="./css/style.css" >
+		<link rel="stylesheet" type="text/css" href="./css/student-homepage.css" >
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<title>QCFirst</title>
 	</head>
   	<body>
-    		<nav>
-			<img src="img/Logo.png" alt="Queens College" style="float:left">
-				<div id="topNav-right" style="float:right">
-					<a href="Student_searchClass.html">Add Class</a>
-					<a href="#curr-classes">View Class</a> 
-					<a href="Login_professor.html">Sign Out</a>
-				</div>
-    		</nav>
+		<nav>
+			<img src="img/Logo.png" alt="Queens College">
+			<div id="topnav-right">
+				<a class="btn btn-primary" href="Student_searchClass.html">Add Class</a>
+				<a class="btn btn-primary" href="#curr-classes">View Class</a> 
+				<a class="btn btn-primary" href="Login_professor.html">Sign Out</a>
+			</div>
+		</nav>
 
-    		<header style="position:relative; text-align:center;">
+		<header>
 			<img src="img/Image_comp.png" alt="people on computer" style="width:100%">
-			<h1 style="position:absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);">Student Home Page</h1> 
-        	</header>
+			<h1>Student Home Page</h1> 
+		</header>
     	
 		<section id="curr-classes">
 			<!-- Displays all currently enrolled classes -->
       		<h2>Enrolled Classes</h2>
-			<table class="container">
+			<table class="classTable container">
 				<thead>
 					<tr class="row">
 						<th class="col">Course Name</th>
 						<th class="col">Course Number</th>
 						<th class="col">Section</th>
-                        			<th class="col">Date</th>
+                        <th class="col">Date</th>
 						<th class="col">Time</th>
 						<th class="col">Professor</th>
 						<th class="col">Course Description</th>
@@ -44,11 +45,12 @@
 					<tr class="row">
 						<td class="col">CS111</td>
 						<td class="col">200862</td>
-                        			<td class="col">22</td>
-            					<td class="col">M/W</td>
+                        <td class="col">22</td>
+            			<td class="col">M/W</td>
 						<td class="col">12pm-1:15pm</td>
 						<td class="col">Alex Ryba</td>
-						<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
+						<td class="col">
+						<button name="course-info" class="course-info" type="submit">INFO</button></td>
 				  	</tr>
 				  	<tr class="row">
 						<td class="col">C++</td>
@@ -81,33 +83,38 @@
 			</table>
 		</section>
         
-      	<a style="float:center" href="Student_searchClass.html">Add a Course</a>
+		<div id="add">
+			<a class="btn btn-primary" id="addbtn" href="Student_searchClass.html">Add a Course</a>
+		</div>
 
-    	<section class="info">  
-      		<div id="links" style="float:left">
-				<h3>Links</h3>
-				<ul>
-					<li><a href="https://www.qc.cuny.edu/Pages/home.aspx">Queens College</a></li>
-					<li><a href="https://www.qc.cuny.edu/computing/HelpDesk/Pages/Welcome.aspx">IT Help Desk</a></li>
-					<li><a href="https://www.qc.cuny.edu/admissions/undergraduate/undergraduate_degree_programs/Pages/default.aspx">Undergraduate Degree Program</a></li>
-					<li><a href="https://www.qc.cuny.edu/Academics/Documents/UG_Bulletin_2017_18.pdf">Undergraduate Bulletin</a></li>
-				</ul>
+		<section class="container-fluid">  
+			<div class="bottom row">
+				<div class="col" id="links">
+					<h3>Links</h3>
+						<ul>
+							<li><a href="https://www.qc.cuny.edu/Pages/home.aspx">Queens College</a></li>
+							<li><a href="https://www.qc.cuny.edu/computing/HelpDesk/Pages/Welcome.aspx">IT Help Desk</a></li>
+							<li><a href="https://www.qc.cuny.edu/admissions/undergraduate/undergraduate_degree_programs/Pages/default.aspx">Undergraduate Degree Program</a></li>
+							<li><a href="https://www.qc.cuny.edu/Academics/Documents/UG_Bulletin_2017_18.pdf">Undergraduate Bulletin</a></li>
+						</ul>
+				</div>
+				<div class="col contact">
+					<h3>Contact Us</h3>
+					<form name="contactform" class="form"  method="post">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name">
+						<label for="message">Message</label>
+						<input type="text" name="message" id="message">
+						<button name="submit" id="submit" class="btn btn-primary"  type="submit">Submit</button>
+					</form>
+				</div>
+				<div id="map" class="col">
+					<a href="https://www.qc.cuny.edu/about/directions/2d/Pages/default.aspx">
+						<img class="img-fluid" src="img/qcMap.jpeg" alt="map of queens College">
+					</a>
+				</div>
 			</div>
-
-			<div class="contact" style="float:right">
-				<h3>Contact Us</h3>
-				<form name="contactForm" class="form"  method="post">
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name">
-
-					<label for="message">Message</label>
-					<input type="text" name="message" id="message">
-
-					<button name="submit" id="submit" type="submit">Submit</button>
-				</form>
-			</div>
-    	</section>
-      
-		<footer style="position:absolute; bottom:0">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+		</section>
+		<footer>&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
 	</body>
 </html>
