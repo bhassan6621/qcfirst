@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-var http = require('http').Server(app);
+var http = require('http');
 const bodyParser = require('body-parser');
 const { connect } = require('mongodb');
 const MongoClient = require('mongodb').MongoClient;
@@ -17,6 +17,12 @@ MongoClient.connect(url, (err, database) => {
     // start the express web server listening on 8080
     app.listen(PORT , "0.0.0.0");
 });
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World\n');
+}).listen(8080, "0.0.0.0");
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('view'));
