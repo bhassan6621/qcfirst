@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/view/index.html');
 });
 
-app.get('/addClass', (req, res) => {
+app.post('/addClass', (req, res) => {
     var courseName = req.body.name;
     var courseId = req.body.id;
     var semester = req.body.semester;
