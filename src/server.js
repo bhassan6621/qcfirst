@@ -15,12 +15,12 @@ MongoClient.connect(url, (err, database) => {
     }
     db = database.db("myFirstDatabase");
     // start the express web server listening on 8080
-    app.listen(8080, '0.0.0.0', () => {
+    app.listen(PORT, () => {
         console.log("listening on 8080");
     });
 });
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static('view'));
 app.use(express.static('img'));
 app.use(express.static('css'));
@@ -43,6 +43,8 @@ app.post('/addClass', (req, res) => {
     var enrollDead = req.body.enroll;
     var capacity = req.body.capacity;
     var description = req.body.description;
+
+    console.log(courseName);
 
     var data = {
         "courseName" : courseName,
