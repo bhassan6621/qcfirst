@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../css/style.css" >
+		<link rel="stylesheet" type="text/css" href="../css/add-course.css" >
+		<link rel="stylesheet" type="text/css" href="../css/prof-homepage.css" >	
+		<script src="./client.js" defer></script>
+		<title>QCFirst</title>
+	</head>
+  
+	<body class="addBody"> <!--TODO: the information of added course show up in the students search and also show up in the course teaching table that is on professor homepage for the instructors-->
+		<header class="topNav">
+		<!--header with logo and sign out button-->
+			<div class="logo" onclick="window.location.href='Index.html'">
+				<img src="../img/Logo.png" alt="Queens College">
+			</div>
+			<div id="signOut">
+				<button name="signOut" type="submit" onclick="location.href='Index.html'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->
+			</div>
+		</header><br>
+
+		<h1>Add Course</h1> 
+		<form name="courseForm" class="form" action="/addClass" method="post"><!--form to add the class to the student search as well as it show up in the professor course teaching table-->
+			<label for="courseName">Course Name:</label>
+			<input type="text" name="name" id="courseName"> <br><br>
+
+			<label for="courseId">Course ID:</label>
+			<input type="text" name="id" id="courseId"><br><br>
+
+			<label for="semester">Semester:</label>
+			<select name="semester" id="semester"> <!--drop down list with all the semesters listed-->
+  				<option value="spring">Spring</option>
+				<option value="summer">Summer</option>
+				<option value="fall">Fall</option>
+				<option value="winter">Winter</option>
+			</select><br><br>
+			
+
+			<label for="department">Department:</label>
+			<select name="department" id="department"> <!--drop down list with all the departments-->
+  				<option value="computer science">Computer Science</option>
+				<option value="math">Math</option>
+				<option value="biology">Biology</option>
+				<option value="art">Art</option>
+			</select><br><br>
+			
+
+			<label for="instructor">Instructor:</label> <!--TODO: instructor can only put their own name, so they can't add class for other professors-->
+			<input id="instructor" name="instructor" type="text"> <br><br>
+
+			<label for="startTime">Start Time:</label> <!--time the class starts-->
+			<input id="startTime" name="startTime" type="time" min="9:00" max="9:00" placeholder="hh:mm"><br><br> <!--placeholder because safari doesn't show the type of date and time in input-->
+			
+			<label for="endTime">End Time:</label><!--time the class ends-->
+			<input id="endTime" name="endTime" type="time" min="9:00" max="9:00" placeholder="hh:mm"><br><br>
+			
+			<label for="days">Days:</label>
+			<input id="days" name="day" type="text"> <br><br>
+
+			<label for="enrollDead">Enrollment Deadline:</label>
+			<input id="enrollDead" name="enroll" type="date" placeholder="mm/dd/yyyy"><br><br>
+
+			<label for="cap">Capacity:</label>
+			<input id="cap" name="capacity" type="text"> <br><br>
+
+			<label for="description">Description:</label>
+			<textarea rows="4" cols="50" name="description" form="form"></textarea><br><br>
+			
+			<button name="submit" id="submit" type="submit">Add</button> <br><br><!--after adding class, redirects the user to the homepage so they can see the update course and can delete it-->
+
+		</form>
+		<div class="linkContact">  
+      			<div id="proLinks">
+				<h3>Links</h3> <!--TODO: add the appropriate links to the IT and other info-->
+				<ul>
+					<li><a href="https://www.qc.cuny.edu/Pages/home.aspx">Queens College</a></li>
+					<li><a href="https://www.qc.cuny.edu/computing/HelpDesk/Pages/Welcome.aspx">IT Help Desk</a></li>
+					<li><a href="https://www.qc.cuny.edu/admissions/undergraduate/undergraduate_degree_programs/Pages/default.aspx">Undergraduate Degree Program</a></li>
+					<li><a href="https://www.qc.cuny.edu/Academics/Documents/UG_Bulletin_2017_18.pdf">Undergraduate Bulletin</a></li>
+				</ul>
+			</div>
+
+			<div class="proContact">
+				<h3>Contact Us</h3>
+				<form name="contactForm" class="coForm"  method="post">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name"> <br><br>
+
+					<label for="message">Message</label>
+					<input type="text" name="message" id="message"><br><br>
+					
+					<button name="submit" id="contact-submit" type="submit">Submit</button> <!-- submit the form-->
+				</form>
+			</div>
+    		</div>
+		<footer >&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+
+	</body>
+</html>
+
+
+
