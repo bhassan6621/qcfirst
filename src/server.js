@@ -15,7 +15,7 @@ MongoClient.connect(url, (err, database) => {
     }
     db = database.db("myFirstDatabase");
     // start the express web server listening on 8080
-    app.listen(PORT);
+    app.listen(PORT , "0.0.0.0");
 });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
