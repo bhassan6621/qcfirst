@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-var bodyParser = require('body-parser');
+var http = require('http').Server(app);
+const bodyParser = require('body-parser');
 const { connect } = require('mongodb');
 const MongoClient = require('mongodb').MongoClient;
 const PORT = process.env.PORT || 8080;
@@ -18,8 +19,8 @@ MongoClient.connect(url, (err, database) => {
         console.log("listening on 8080");
     });
 });
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('view'));
 app.use(express.static('img'));
 app.use(express.static('css'));
