@@ -14,7 +14,7 @@ MongoClient.connect(url, (err, database) => {
     }
     db = database.db("myFirstDatabase");
     // start the express web server listening on 8080
-    app.listen('0.0.0.0','8080', () => {
+    app.listen(8080, '0.0.0.0', () => {
         console.log("listening on 8080");
     });
 });
