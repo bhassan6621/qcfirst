@@ -5,7 +5,7 @@ var http = require('http').Server(app);
 const bodyParser = require('body-parser');
 const { connect } = require('mongodb');
 const MongoClient = require('mongodb').MongoClient;
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const url='mongodb+srv://bibi:hassan123@qcfirst.h0nic.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'; 
 let db;
 
@@ -15,9 +15,7 @@ MongoClient.connect(url, (err, database) => {
     }
     db = database.db("myFirstDatabase");
     // start the express web server listening on 8080
-    app.listen(PORT, () => {
-        console.log("listening on 8080");
-    });
+    app.listen(PORT);
 });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
