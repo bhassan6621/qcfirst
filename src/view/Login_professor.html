@@ -15,15 +15,14 @@
 		<h1>QCFirst Log In</h1>
 		<h3> Log in with your qmail credentials</h3>
 		<div class="logIn"> <!-- Takes the username and password from the instructor -->
-			<form name="loginForm" class="form-signIn"  action="/login" method="post"> <!-- TODO: only let the user log in if all the required input are filled and with required info-->
+			<form name="loginForm" class="form-signIn"> <!-- TODO: only let the user log in if all the required input are filled and with required info-->
 				<label for="QCFirstUsername">Username</label>
 				<input type="text" name="username" id="QCFirstUsername" value="@qmail.cuny.edu"> <br><br>
 
 				<label for="QCFirstPassword">Password</label>
 				<input type="password" name="password" id="QCFirstPassword"><br><br> <!-- TODO: password validation and restrictions-->
-				<button id="log" onclick="location.href='professor_homepage.html'">Log in</button> <!--redirects them to the homepage-->
-
 			</form>
+			<button id="log" onclick="location.href='professor_homepage.html'">Log in</button> <!--redirects them to the homepage-->
 		</div>
 		<footer class="logFoot">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
   	</body>
