@@ -4,7 +4,7 @@
 * Bibi Hassan & Navsangeet Kaur
 * We both splitted the pages in half. We came togther before the day of the due date of the deliverables and helped each other out, and also discusses the changes and updates that are needed and evalutae each others work.
 * Bibi Hassan: Created the homepage, student homepage, and student search page. Did the CSS styling for those pages. For the backend deliverable 1, deployed the website, and fixed the media queries to make the tables repsonsive.
-* Navsangeet kaur: Created log in pages for both professor and student, sign up page, professor homepage and add course page. Did the CSS styling for those pages. For backend deliverable 1, created the sign up, log in's post methods, and session.
+* Navsangeet kaur: Created log in pages for both professor and student, sign up page, professor homepage and add course page. Did the CSS styling for those pages. For backend deliverable 1, created the sign up, log in's post methods, and session using mongodb atlas database. 
 
 ## Features
  * Responsive Design for mobile, tablet, and desktop
@@ -41,6 +41,9 @@ It also lets the instructors view the classes that they are teaching, add more c
 * We created the database that has users, and sessions models. 
 * The users models has all the information that the user put in the sign up form to register for the account, both instructor and student sign up information is in the same model. Then, the log in form match the provided email and password with the stored information and let the user log in or alert them if it fails. 
 * The sessions model contains the cookies, session id, and expired date and time information. This model is populated when the user logs in the account.
+* We used replit to host our website and used mongodb atlas databse. 
+* For front-end technologies, we used github, and bootstrap. 
+* For backend, we used node, express, mongodb, mongoose, path, and body-parser.
 * This is the live link to our replit: https://qcfirst-1.navsangeet.repl.co
 * This is the join link for our replit: https://replit.com/join/ymgjogqb-navsangeet
 * The link to our package.json: https://github.com/bhassan6621/qcfirst/blob/main/package.json
