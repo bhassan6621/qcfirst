@@ -3,7 +3,7 @@
 ## Contributors
 * Bibi Hassan & Navsangeet Kaur
 * We both splitted the pages in half. We came togther before the day of the due date of the deliverables and helped each other out, and also discusses the changes and updates that are needed and evalutae each others work.
-* Bibi Hassan: Created the homepage, student homepage, and student search page. Did the CSS styling for those pages. For becakend deliverable 1, deployed the website, and fixed the media queries to make the tables repsonsive.
+* Bibi Hassan: Created the homepage, student homepage, and student search page. Did the CSS styling for those pages. For the backend deliverable 1, deployed the website, and fixed the media queries to make the tables repsonsive.
 * Navsangeet kaur: Created log in pages for both professor and student, sign up page, professor homepage and add course page. Did the CSS styling for those pages. For backend deliverable 1, created the sign up, log in's post methods, and session.
 
 ## Features
