@@ -82,3 +82,28 @@ footer {
 .bottom {
     margin: 10px 0;
 }
+
+@media screen and (max-width: 1200px) {
+    .img {
+        width: 5%;
+        height: 5%; 
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .img {
+        width: 10%;
+        height: 10%;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .img {
+        width: 10%;
+        height: 10%;
+    
+    }
+    
+}

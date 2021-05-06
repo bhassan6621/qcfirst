@@ -5,17 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../css/style.css" >
 		<link rel="stylesheet" type="text/css" href="../css/Login.css" >
+    <script src="prof_login.js" defer></script>
 		<title>QCFirst</title>
 	</head>
   
 	<body class="logContainer">
 		<header class="logo" onclick="window.location.href='Index.html'">
-			<img src="../img/Logo.png"  alt="Queens College">
+			<img class="img" src="../img/Logo.png"  alt="Queens College">
 		</header>
 		<h1>QCFirst Log In</h1>
 		<h3> Log in with your qmail credentials</h3>
 		<div class="logIn"> <!-- Takes the username and password from the instructor -->
-			<form name="loginForm" class="form-signIn"> <!-- TODO: only let the user log in if all the required input are filled and with required info-->
+			<form name="loginForm" class="form-signIn" action="/login_prof" method="post"> <!-- TODO: only let the user log in if all the required input are filled and with required info-->
 				<label for="QCFirstUsername">Username</label>
 				<input type="text" name="username" id="QCFirstUsername" value="@qmail.cuny.edu"> <br><br>
 
