@@ -1,13 +1,29 @@
-const addCourseBtn = document.getElementById('submit');
-addCourseBtn.addEventListener('click', function(e) {
+const login = document.getElementById('log');
+login.addEventListener('click', function(e) {
     console.log("btn clicked");
-    fetch('/addClass', {method:'POST'})
+    fetch('/login_stu', {method:'POST'})
         .then(function(response) {
             if (response.ok) {
-                console.log('class was added');
+                console.log('login successful');
                 return;
             }
-            throw new Error("request failed");
+            throw new Error("login failed");
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+});
+
+const login = document.getElementById('log');
+login.addEventListener('click', function(e) {
+    console.log("btn clicked");
+    fetch('/login_prof', {method:'POST'})
+        .then(function(response) {
+            if (response.ok) {
+                console.log('login successful');
+                return;
+            }
+            throw new Error("login failed");
         })
         .catch(function(error) {
             console.log(error);
