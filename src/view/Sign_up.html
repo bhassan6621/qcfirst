@@ -20,13 +20,12 @@
 		<h4>If you are an instructor, click the instructor button</h4> <!-- TODO:  make the program recognize difference between the professor and students' CUNYID-->
 		<h4>If you are a student, click the student button</h4>
 		
-		<input  id="instruc" name="instructor" type="radio"> 
-		<label for="instruc">Instructor</label>
-		<input id="stud" name="instructor"  type="radio">
-		<label for="stud">Student</label><br><br><br>
-		
 		<div class="container">
 				<form name="signupForm" class="form-horizontal"  action="/sign_up" method="post">
+        	<input  id="instruc" name="userType" value="instructor" type="radio"> 
+          <label for="instruc">Instructor</label>
+          <input id="stud" name="userType" value="student" type="radio">
+          <label for="stud">Student</label><br><br><br>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="firstName">First Name:</label>
 						<div class="col-sm-6">
@@ -66,15 +65,8 @@
 
 			</form>
 		</div>
-<<<<<<< HEAD
-		
-		<div>
-			<span>Already Registered! If student, click here! <a href="Login_student.html">Login</a></span>
-			<span>Already Registered! If professor, click here! <a href="Login_professor.html">Login</a></span>
-=======
 		<div>
 			<span>Already Registered! <a href="/login_stu">Login</a></span>
->>>>>>> 295eaaf6a5323b82d7147df9a752ed0e01b65889
 		</div>
 		<footer>&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
   	</body>

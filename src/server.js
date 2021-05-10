@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 var session = require('express-session');
 const app = express();
 var http = require('http');
+//let alert = require('alert');  
 const bodyParser = require('body-parser');
 const { connect } = require('mongodb');
 var MongoStore = require('connect-mongo')(session);
@@ -17,7 +18,9 @@ const PORT = process.env.PORT || 8080;
 const url = 'mongodb+srv://bibi:hassan123@qcfirst.h0nic.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 let db;
 
-MongoClient.connect(url, (err, database) => {
+MongoClient.connect(url,{
+  useUnifiedTopology: true
+}, (err, database) => {
   if (err) {
     return console.log(err);
   }
@@ -38,30 +41,9 @@ mongoose.connect('mongodb+srv://bibi:hassan123@qcfirst.h0nic.mongodb.net/myFirst
   }
 });
 
-var dbo = mongoose.connection;
-dbo.on('error', console.error.bind(console, 'connection error:'));
-dbo.once('open', function () {
-});
-
-// catch 404 and forward to error handler
-// app.use(function (req, res, next) {
-//   var err = new Error('File Not Found');
-//   err.status = 404;
-//   next(err);
-// });
-
-// // error handler
-// // define as the last app.use callback
-// app.use(function (err, req, res, next) {
-//   res.status(err.status || 500);
-//   res.send(err.message);
-// });
-
-
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, function () {
-//   console.log('Server is listening on '+PORT);
-
+// var dbo = mongoose.connection;
+// dbo.on('error', console.error.bind(console, 'connection error:'));
+// dbo.once('open', function () {
 // });
 
 app.use(bodyParser.json());
@@ -97,24 +79,22 @@ userSchema = new Schema( {
     type: String,
     required: true,
     format: "Email",
-    //unique: true
   },
 	name: {
     type: String,
     required: true,
-    minLength: 5,
-    maxLength: 50
   },
   last: {
     type: String,
     required: true,
-    minLength: 2,
-    maxLength: 20
+  },  
+  userType: {
+    type: String,
+    require: true
   },
   password: {
     type: String,
     required: true,
-    unique: true
   },
 	confirmPassword: {
     type: String
@@ -146,6 +126,7 @@ app.post('/sign_up', function(req, res, next) {
 							email:personInfo.email,
 							name: personInfo.name,
               last: personInfo.last,
+              userType: personInfo.userType,
 							password: personInfo.password,
 							confirmPassword: personInfo.confirmPssword
 						});
@@ -156,7 +137,7 @@ app.post('/sign_up', function(req, res, next) {
 								console.log('Success');
 						});
 					}).sort({_id: -1}).limit(1);
-					res.res.sendFile(__dirname + '/view/Index.html');;
+					res.sendFile(__dirname + '/view/Index.html');;
 				}else{
 					res.send({"Success":"Email is already used."});
 				}
@@ -167,23 +148,21 @@ app.post('/sign_up', function(req, res, next) {
 	}
 });
 
-// app.get('/login_stu', (req, res) => {
-//     res.sendFile(path.join(__dirname + '/src/view/Login_student.html'));
-// });
-
 app.post('/login_stu',function (req, res, next) {
 	User.findOne({email:req.body.email },function(err,user){
 		if(!user){
-    res.send({"Error":"Email not found"});
-			
+      console.log("not a user");
+      res.sendFile(__dirname+ "/view/Index.html")
     }
     else{
-      if(req.body.password===user.password){
+      if(req.body.password===user.password && user.userType == "student"){
         req.session.userId = user.unique_id;
         return res.sendFile(__dirname + '/view/student_homepage.html');
       }
       else{
-        return res.send({'Error':'Invalid password'});
+        console.log("incorrect email or password");
+        return;
+        // res.send({'Error':'Invalid password'});
       }
     }
   });
@@ -196,18 +175,20 @@ app.post('/login_prof', function (req, res, next) {
 			
     }
     else{
-      if(req.body.password===user.password){
+      if(req.body.password===user.password && user.userType == "instructor"){
         req.session.userId = user.unique_id;
         return res.sendFile(__dirname + '/view/professor_homepage.html');
       }
       else{
-        return res.send({'Error':'Invalid password'});
+        console.log("Incorrect Email or password!");
+        //alert("Invalid Password");
+        /*popup.alert({
+          content: 'Incorrect Password. Try again!'});*/
+        return;// res.send({'Error':'Invalid password'});
       }
     }
   });
-  //return res.redirect('/src/view/student_homepage.html');
 });
-
 // Prof add course to DB
 app.post('/addClass', (req, res) => {
   var courseName = req.body.name;
