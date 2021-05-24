@@ -3,8 +3,8 @@
 ## Contributors
 * Bibi Hassan & Navsangeet Kaur
 * We both splitted the pages in half. We came togther before the day of the due date of the deliverables and helped each other out, and also discusses the changes and updates that are needed and evalutae each others work.
-* Bibi Hassan: Created the homepage, student homepage, and student search page. Did the CSS styling for those pages. For the backend deliverable 1, deployed the website, and fixed the media queries to make the tables repsonsive.
-* Navsangeet kaur: Created log in pages for both professor and student, sign up page, professor homepage and add course page. Did the CSS styling for those pages. For backend deliverable 1, created the sign up, log in's post methods, and session using mongodb atlas database. 
+* Bibi Hassan: Created the homepage, student homepage, and student search page. Did the CSS styling for those pages. For the backend deliverable 1, deployed the website, and fixed the media queries to make the tables repsonsive, turned html files to ejs, and worked on displaying errors in ejs from the backend. For whole final project, worked on backend for professor side such as addded classes to the database and added roster where students who are enrolled in tahts pecific class are shown. For student side such as show the table after a search and put the enrolled courses in the user courses array and after enrolling show the courses on student homepage table.
+* Navsangeet kaur: Created log in pages for both professor and student, sign up page, professor homepage and add course page. Did the CSS styling for those pages. For backend deliverable 1, created the sign up, log in's post methods, and session using mongodb atlas database. For whole final project, worked on putting teh added classes by professor to the coures array in user model and then display the courses on the professor homepage, also worked on deleteing the course from teh database and the table when professor clicks the delete button. Also created admin user type, and it's separate log in page and created admin page where the user can see all the collections that are stored in the database.  
 
 ## Features
  * Responsive Design for mobile, tablet, and desktop
@@ -41,13 +41,16 @@ It also lets the instructors view the classes that they are teaching, add more c
 * We created the database that has users, and sessions models. 
 * The users models has all the information that the user put in the sign up form to register for the account, both instructor and student sign up information is in the same model. Then, the log in form match the provided email and password with the stored information and let the user log in or alert them if it fails. 
 * The sessions model contains the cookies, session id, and expired date and time information. This model is populated when the user logs in the account.
+* The contact model has all the messages that are sent by the user with their name and message.
+* For professor side, first the professor add the class to the database and then those added classes display on the professor homepage table for that specfic professor. 
+* For student side, the student can search the classes that are stored/added by the professor and the classes search show up in table on the same page so student can enroll in those classes. Then the student hit enroll and the course adds in the course array in the user model where the user type is student and then that course show up in the table on student hoempage table. 
+* The students who are enrolled in a specific course shows up in the roster that is on the pofessor homepage for each section and course. The delete button deletes the that specific course from the table as well as teh databse.
 * We used replit to host our website and used mongodb atlas databse. 
 * For front-end technologies, we used github, and bootstrap. 
 * For backend, we used node, express, mongodb, mongoose, path, and body-parser.
-* This is the live link to our replit: https://qcfirst-1.navsangeet.repl.co
-* This is the join link for our replit: https://replit.com/join/ymgjogqb-navsangeet
+* This is the live link to our replit: https://qcfirst-ejs.bibihassan.repl.co
 * The link to our package.json: https://github.com/bhassan6621/qcfirst/blob/main/package.json
-* The link to our main server.js: https://github.com/bhassan6621/qcfirst/blob/main/src/server.js
+* The link to our main server.js: https://replit.com/@bibihassan/qcfirst-ejs#src/server.js
 
 
 ## Visuals of the QCFirst Website
