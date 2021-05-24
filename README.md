@@ -9,7 +9,6 @@
 ## Features
  * Responsive Design for mobile, tablet, and desktop
  * Links to get more information about how to use the website 
- * Contact form is provided
  * Clear Navigation
  * Geographic information
  * Images
