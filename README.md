@@ -31,8 +31,19 @@ It also lets the instructors view the classes that they are teaching, add more c
   * The professor homepage contains the table with the classes that professors are already decided to teach and one of the column contains delete button which will delete the course and remove it from the table. It also consists the sign out button which will log out the user and redirect to the log in, and has add course button available on the same page that redirects the professors to the add course page.
   * The add course page has the inputs where professor can input the course info that they want to show up on the student's search window search, and after entering the whole information they can click the add button and that course will show up on the professor courses teaching table that is on the professor homepage as well as in the students search table. 
 
-## Backend for the QCFirst Website
+## Backend
 
+* We have worked on the user management functionalities. 
+* We created the database that has users, and sessions models. 
+* The users models has all the information that the user put in the sign up form to register for the account, both instructor and student sign up information is in the same model. Then, the log in form match the provided email and password with the stored information and let the user log in or alert them if it fails. 
+* The sessions model contains the cookies, session id, and expired date and time information. This model is populated when the user logs in the account.
+* We used replit to host our website and used mongodb atlas databse. 
+* For front-end technologies, we used github, and bootstrap. 
+* For backend, we used node, express, mongodb, mongoose, path, and body-parser.
+* This is the live link to our replit: https://qcfirst-1.navsangeet.repl.co
+* This is the join link for our replit: https://replit.com/join/ymgjogqb-navsangeet
+* The link to our package.json: https://github.com/bhassan6621/qcfirst/blob/main/package.json
+* The link to our main server.js: https://github.com/bhassan6621/qcfirst/blob/main/src/server.js
 
 ## CSS styling for the QCFirst Website
 
