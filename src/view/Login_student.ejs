@@ -6,14 +6,14 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css" >
 		<link rel="stylesheet" type="text/css" href="../css/Login.css" >		
 		<title>QCFirst</title>
-    <script src="./student_login.js" defer></script>
+		<script src="./student_login.js" defer></script>
 
 	</head>
-  
+
 	<body class="logContainer">
 		<header class="logo" onclick="window.location.href='/Index'">
 			<img class="img" src="../img/Logo.png"  alt="Queens College">
-      <button class="btn btn-primary" onclick="location.href='/Index'">Homepage</button>
+			<button class="btn btn-primary" onclick="location.href='/Index'">Homepage</button>
 		</header>
 		<h1>QCFirst Log In</h1>
 		<h3> Log In With Your Student Qmail Credentials</h3>
@@ -26,11 +26,12 @@
 				<input type="password" name="password" id="QCFirstPassword"><br><br> <!-- TODO: password validation and restriction -->
 				<button id="log" onclick="location.href='/student_homepage'">Log in</button> <!-- redirects the students to the student homepage -->
 			</form>
+		</div>
 
-    <h3 id="err"> <%=valid%> </h3>
-    <span>Not Registered! <a href="/Sign_up">Sign Up</a></span><br>
-		
+		<h3 id="err"> <%=valid%> </h3>
+		<span>Not Registered! <a href="/Sign_up">Sign Up</a></span><br>
+
 		<footer class="logFoot">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
-  	</body>
+	</body>
 </html>
 
