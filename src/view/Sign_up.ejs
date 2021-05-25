@@ -8,73 +8,73 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> <!--bootsrap for input horizontal alignment-->
 		<title>QCFirst</title>
 
-    
+
 	</head>
-  
+
 	<body class="contain">
 		<header class="signHead logo" onclick="window.location.href='/Index'">
 			<img class="img' src="../img/Logo.png"  alt="Queens College">
-      <button class="btn btn-primary" onclick="location.href='/Index'">Homepage</button>
+			<button class="btn btn-primary" onclick="location.href='/Index'">Homepage</button>
 		</header>
 		<h1>QCFirst Sign Up</h1>
 		<h3>Fill out the whole information</h3>
 		<h4>If you are an instructor, click the instructor button</h4> <!-- TODO:  make the program recognize difference between the professor and students' CUNYID-->
 		<h4>If you are a student, click the student button</h4>
-		
-		<div class="container">
-				<form name="signupForm" class="form-horizontal"  action="/sign_up" method="post">
-          <input  id="admin" name="userType" value="admin" type="radio"> 
-          <label for="admin">Admin</label>
-        	<input  id="instruc" name="userType" value="instructor" type="radio"> 
-          <label for="instruc">Instructor</label>
-          <input id="stud" name="userType" value="student" type="radio">
-          <label for="stud">Student</label><br><br><br>
-					<div class="form-group">
-						<label class="control-label col-sm-2" for="firstName">First Name:</label>
-						<div class="col-sm-6">
-							<input class="form-control" type="text" name="name" id="firstName"> <br><br>
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<label class="control-label col-sm-2" for="lastName">Last Name:</label>
-						<div class="col-sm-6">
-							<input class="form-control" type="text" name="last" id="lastName"><br><br>
-						</div>
-					</div>
-					
-					
-					<div class="form-group">
-						<label class="control-label col-sm-2" for="QCFirstEmail">QC Email:</label>
-						<div class="col-sm-6">
-							<input class="form-control" type="text" name="email" id="QCFirstEmail" value="@qmail.cuny.edu"> <br><br>
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<label class="control-label col-sm-2" for="QCFirstPassword">Password:</label>      <!--TODO: validate the password-->
-						<div class="col-sm-6">	
-							<input class="form-control" type="password" name="password" id="QCFirstPassword"><br><br>
-						</div>
-					</div>
 
-					<div class="form-group">
-						<label class="control-label col-sm-2" for="confirmPassword">Confirm Password:</label>  <!--TODO: match the password-->
-						<div class="col-sm-6">
-							<input class="form-control" type="password" name="confirmPassword" id="confirmPassword">
-						</div>
-					</div><br><br>
-          <h3 id="err"> <%=valid%> </h3>	
-					<button id="signup" onclick="location.href='/Index'">Sign Up</button>  <!--redirects to the homepage after signing up-->
+		<div class="container">
+			<form name="signupForm" class="form-horizontal"  action="/sign_up" method="post">
+				<input  id="admin" name="userType" value="admin" type="radio"> 
+				<label for="admin">Admin</label>
+				<input  id="instruc" name="userType" value="instructor" type="radio"> 
+				<label for="instruc">Instructor</label>
+				<input id="stud" name="userType" value="student" type="radio">
+				<label for="stud">Student</label><br><br><br>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="firstName">First Name:</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="text" name="name" id="firstName"> <br><br>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="lastName">Last Name:</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="text" name="last" id="lastName"><br><br>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="QCFirstEmail">QC Email:</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="text" name="email" id="QCFirstEmail" value="@qmail.cuny.edu"> <br><br>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="QCFirstPassword">Password:</label>      <!--TODO: validate the password-->
+					<div class="col-sm-6">	
+						<input class="form-control" type="password" name="password" id="QCFirstPassword"><br><br>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="confirmPassword">Confirm Password:</label>  <!--TODO: match the password-->
+					<div class="col-sm-6">
+						<input class="form-control" type="password" name="confirmPassword" id="confirmPassword">
+					</div>
+				</div><br><br>
+				<h3 id="err"> <%=valid%> </h3>	
+				<button id="signup" onclick="location.href='/Index'">Sign Up</button>  <!--redirects to the homepage after signing up-->
 
 			</form>
 		</div>
 		<div>
 			<span>Student & Already Registered! <a href="/Login_student">Login</a></span><br>
-      <span> Instructor & Already Registered! <a href="/Login_professor">Login</a></span>
-      <span> Admin & Already Registered! <a href="/Login_admin">Login</a></span>
+			<span> Instructor & Already Registered! <a href="/Login_professor">Login</a></span>
+			<span> Admin & Already Registered! <a href="/Login_admin">Login</a></span>
 		</div>
 		<footer>&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
-  	</body>
-  
+	</body>
+
 </html>
