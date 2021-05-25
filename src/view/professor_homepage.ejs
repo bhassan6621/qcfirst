@@ -6,113 +6,104 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="../css/style.css" >
 		<link rel="stylesheet" type="text/css" href="../css/prof-homepage.css" >	
-    <script src="./sign_out.js" defer></script>	
+		<script src="./sign_out.js" defer></script>	
 		<title>QCFirst</title>
 	</head>
-  
-  	<body>
-    		<nav class="proTopNav">
-    			  <!--create navbar with logo on teh left-->
-			    <div class="logo" onclick="window.location.href='/Index'">
-				    <img class="img" src="../img/Logo.png" alt="Queens College">
-			    </div>
-			    <div id="navbar-right">
-				    <button class="btn btn-primary" 
-            onclick="location.href='/Add_course'">Add Class</button>  <!--redirects the user to the add class page-->
-				    <button class="btn btn-primary"
-            onclick="location.href='#viewClass'">View Class</button> 
-            
-            <form name="logoutForm" class="form-logout"  action="/signOut" method="post">
-				      <button name="signOut" id="out" type="submit" onclick="location.href='/Index'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->
-              
-            </form> 
-			    </div>
-    		</nav>
 
-    		<header id="banner">  <!--TODO: add the styling to the CSS-->
+	<body>
+		<nav class="proTopNav">
+			<!--create navbar with logo on teh left-->
+			<div class="logo" onclick="window.location.href='/Index'">
+				<img class="img" src="../img/Logo.png" alt="Queens College">
+			</div>
+			<div id="navbar-right">
+				<button class="btn btn-primary" onclick="location.href='/Add_course'">Add Class</button>  <!--redirects the user to the add class page-->
+				<button class="btn btn-primary" onclick="location.href='#viewClass'">View Class</button> 
+
+				<form name="logoutForm" class="form-logout"  action="/signOut" method="post">
+					<button name="signOut" id="out" type="submit" onclick="location.href='/Index'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->
+				</form> 
+			</div>
+		</nav>
+
+		<header id="banner">  <!--TODO: add the styling to the CSS-->
 			<img src="../img/Image_comp.png" id="pic" alt="people on computer">
 			<h1>Professor Home page</h1> 
-    		</header><br>
-    	
+		</header><br>
+
 		<div id="viewClass"> 
 			<h1>Courses Teaching</h1>
-      
+
 			<table class="classTable">  
-				<thead>
-					<tr class="row">
-						<th class="col">Course Name</th>
-						<th class="col">Course ID</th>
-						<th class="col">Start Time</th>
-            <th class="col">end Time</th>
-						<th class="col">Days</th>
-						<th class="col">Capacity</th>
-						<th class="col">Description</th>
-            <th class="col">Roster</th>
-            <th class="col">Delete</th>
-						 
-					</tr>
-				</thead>
+			<thead>
+			<tr class="row">
+			<th class="col">Course Name</th>
+			<th class="col">Course ID</th>
+			<th class="col">Start Time</th>
+			<th class="col">end Time</th>
+			<th class="col">Days</th>
+			<th class="col">Capacity</th>
+			<th class="col">Description</th>
+			<th class="col">Roster</th>
+			<th class="col">Delete</th>
 
-        <tbody>
-            
-            <% if(print != null) {   
-            print.forEach(function(item) { %>
-              <tr class="row">
-                <form name="rosterForm" class="form-roster"  action="/prof_roster" method="post">
-                  <td class="col"><%= item.courseName %></td>
-                  <td class="col"><%= item.courseId %></td>
-                  <td class="col"><%= item.start %></td>
-                  <td class="col"><%= item.end%></td>
-                  <td class="col"><%= item.days %></td>
-                  <td class="col"><%= item.capacity %></td>  
-                  <td class="col"><%= item.description %></td>
-                  <td class="col"><input type="radio" id="roster" name="roster" value= <%= item.courseId %> ></td>
-                 
-                  <td class="col"><input type="radio" id="deleteButn" name="deleteButn" value= <%= item.courseId %>></td> 
-                  
-                   
-              </tr>
-          <% }) 
-          { %> <button id="rosterBtn" class="btn btn-primary">View Roster</button> <% } 
+			</tr>
+			</thead>
 
-          { %> <button id="deleteBtn" class="btn btn-primary">Delete Course</button> <% } 
-            
-            } %>  
-          </form> 
-				</tbody>
+			<tbody>
+
+			<% if(print != null) {   
+			print.forEach(function(item) { %>
+			<tr class="row">
+			<form name="rosterForm" class="form-roster"  action="/prof_roster" method="post">
+			<td class="col"><%= item.courseName %></td>
+			<td class="col"><%= item.courseId %></td>
+			<td class="col"><%= item.start %></td>
+			<td class="col"><%= item.end%></td>
+			<td class="col"><%= item.days %></td>
+			<td class="col"><%= item.capacity %></td>  
+			<td class="col"><%= item.description %></td>
+			<td class="col"><input type="radio" id="roster" name="roster" value= <%= item.courseId %> ></td>
+
+			<td class="col"><input type="radio" id="deleteButn" name="deleteButn" value= <%= item.courseId %>></td> 
+
+
+			</tr>
+			<% }) 
+			{ %> <button id="rosterBtn" class="btn btn-primary">View Roster</button> <% } 
+
+			{ %> <button id="deleteBtn" class="btn btn-primary">Delete Course</button> <% } 
+
+			} %>  
+			</form> 
+			</tbody>
 			</table>
-      
+
 		</div><br>
-        
-    		<div id="add">
-      			<button onclick="location.href='/Add_course'">Add Courses</button> <!--redirects the user to the add class page-->
-    		</div><br>
-        <div id="roster">
-          <form>
-            
-          </form>
-        </div>
-    
-    		  
-      	<section class="container-fluid">  
-			    <div class="bottom row">
-				  <div class="col" id="links">
-					  <h3>Links</h3>
-						<ul>
-							<li><a href="https://www.qc.cuny.edu/Pages/home.aspx">Queens College</a></li>
-							<li><a href="https://www.qc.cuny.edu/computing/HelpDesk/Pages/Welcome.aspx">IT Help Desk</a></li>
-							<li><a href="https://www.qc.cuny.edu/admissions/undergraduate/undergraduate_degree_programs/Pages/default.aspx">Undergraduate Degree Program</a></li>
-							<li><a href="https://www.qc.cuny.edu/Academics/Documents/UG_Bulletin_2017_18.pdf">Undergraduate Bulletin</a></li>
-						</ul>
-				  </div>
-				  <div id="map" class="col">
+
+		<div id="add">
+			<button onclick="location.href='/Add_course'">Add Courses</button> <!--redirects the user to the add class page-->
+		</div><br>
+		
+		<section class="container-fluid">  
+			<div class="bottom row">
+				<div class="col" id="links">
+					<h3>Links</h3>
+					<ul>
+						<li><a href="https://www.qc.cuny.edu/Pages/home.aspx">Queens College</a></li>
+						<li><a href="https://www.qc.cuny.edu/computing/HelpDesk/Pages/Welcome.aspx">IT Help Desk</a></li>
+						<li><a href="https://www.qc.cuny.edu/admissions/undergraduate/undergraduate_degree_programs/Pages/default.aspx">Undergraduate Degree Program</a></li>
+						<li><a href="https://www.qc.cuny.edu/Academics/Documents/UG_Bulletin_2017_18.pdf">Undergraduate Bulletin</a></li>
+					</ul>
+				</div>
+				<div id="map" class="col">
 					<a href="https://www.qc.cuny.edu/about/directions/2d/Pages/default.aspx">
 						<img class="img-fluid" src="../img/qcMap.jpeg" alt="map of queens College">
 					</a>
 				</div>
 			</div>
 		</section>
-      
+
 		<footer>&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
 	</body>
 </html>
