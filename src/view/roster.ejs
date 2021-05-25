@@ -1,0 +1,18 @@
+<html lang='en'>
+  <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <form name="back_btn" action="/back_prof" method="post">
+      <button name="signOut" type="submit" id="back" onclick="location.href='/professor_homepage'">Back</button> 
+    </form>
+
+    <h1> Students Enrolled </h1>
+    <% if(students != null) {
+      students.forEach(function(student) { %>
+        <h3> <%= student.name %> <%= student.last %> </h3>
+    <% }) 
+    } %>
+  </body>
+</html>

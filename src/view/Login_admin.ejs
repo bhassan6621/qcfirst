@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../css/style.css" >
+		<link rel="stylesheet" type="text/css" href="../css/Login.css" >		
+		<title>QCFirst</title>
+    <script src="./admin_login.js" defer></script>
+
+	</head>
+  
+	<body class="logContainer">
+		<header class="logo" onclick="window.location.href='/Index'">
+			<img class="img" src="../img/Logo.png"  alt="Queens College">
+      <button class="btn btn-primary" onclick="location.href='/Index'">Homepage</button>
+		</header>
+		<h1>QCFirst Log In</h1>
+		<h3> Log In With Your Qmail Credentials</h3>
+		<div class="logIn">  <!-- Takes the username and password from the students -->
+			<form name="loginForm" class="form-signin"  action="/login_adm" method="post">  <!-- TODO: only let teh user log in if all the required input are filled and with required info-->
+				<label for="QCFirstUsername">Email</label>
+				<input type="text" name="email" id="QCFirstUsername" value="@qmail.cuny.edu"> <br><br>
+
+				<label for="QCFirstPassword">Password</label>
+				<input type="password" name="password" id="QCFirstPassword"><br><br> <!-- TODO: password validation and restriction -->
+				<button id="log" onclick="location.href='/Admin_page'">Log in</button> <!-- redirects the students to the student homepage -->
+			</form>
+
+    <h3 id="err"> <%=valid%> </h3> 
+
+    <span>Not Registered! <a href="/Sign_up">Sign Up</a></span><br>
+		
+		<footer class="logFoot">&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
+  	</body>
+</html>
+
