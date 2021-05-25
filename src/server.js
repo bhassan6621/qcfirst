@@ -153,6 +153,7 @@ userSchema = new Schema({
     type: [String] 
   }
 });
+
 User = mongoose.model('User', userSchema);
 
 classSchema = new Schema({
@@ -193,6 +194,7 @@ classSchema = new Schema({
       type: [String]
     }  
 });
+
 Course = mongoose.model('Course', classSchema);
 
 //the Cache-control headers to no-cache conditionally for logged out users as per code below to force the browser to obtain new copy of the page even when they hit "back"
