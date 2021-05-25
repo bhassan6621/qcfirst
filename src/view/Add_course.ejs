@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/add-course.css" >
 		<link rel="stylesheet" type="text/css" href="../css/prof-homepage.css" >	
 		<script src="./addCourse.js" defer></script>
-    <script src="./sign_out.js" defer></script>
+    		<script src="./sign_out.js" defer></script>
 		<title>QCFirst</title>
 	</head>
   
@@ -17,25 +17,25 @@
 			<div class="logo" onclick="window.location.href='/Index'">
 				<img class="img" src="../img/Logo.png" alt="Queens College">
 			</div>
-      <div id="nav-right">
+      			<div id="nav-right">
 				<button class="btn btn-primary" onclick="location.href='/professor_homepage'">Homepage</button>
 
-        <form name="logoutForm" class="form-logout" action="/signOut" method="post">
-				  <button name="signOut" type="submit" id="out" onclick="location.href='/Index'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->
-        </form>
+        			<form name="logoutForm" class="form-logout" action="/signOut" method="post">
+					<button name="signOut" type="submit" id="out" onclick="location.href='/Index'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->
+        			</form>
 			</div>
       
 		</header><br>
 
 		<h1>Add Course</h1> 
-    <h2 id='err'> <%= alertUser %> </h2>
+    		<h2 id='err'> <%= alertUser %> </h2>
 		<form name="courseForm" class="form" action="/addClass" method="post"><!--form to add the class to the student search as well as it show up in the professor course teaching table-->
 			<label for="courseName">Course Name:</label>
 			<input type="text" name="name" id="courseName"> <br><br>
 
 			<label for="courseId">Course ID:</label>
 			<input type="text" name="id" id="courseId"><br><br>
-      <!--CourseId can't have space.-->
+     			<!--CourseId can't have space.-->
 
 			<label for="semester">Semester:</label>
 			<select name="semester" id="semester"> <!--drop down list with all the semesters listed-->
@@ -88,6 +88,7 @@
 					<li><a href="https://www.qc.cuny.edu/admissions/undergraduate/undergraduate_degree_programs/Pages/default.aspx">Undergraduate Degree Program</a></li>
 					<li><a href="https://www.qc.cuny.edu/Academics/Documents/UG_Bulletin_2017_18.pdf">Undergraduate Bulletin</a></li>
 				</ul>
+			</div>
 		</div>
 		<footer >&copy;QCFirst@2021Nav&Bibi &#124; privacyPolicy</footer>
 	</body>
