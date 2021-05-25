@@ -3,57 +3,58 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-			<link type="text/css" href="../css/style.css" rel="stylesheet">
-      <link type="text/css" href="../css/prof-homepage.css" rel="stylesheet">
-			
-			<title>QCFirst</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link type="text/css" href="../css/style.css" rel="stylesheet">
+		<link type="text/css" href="../css/prof-homepage.css" rel="stylesheet">
+
+		<title>QCFirst</title>
 	</head>
-  <body>
-		    <nav class="proTopNav">
-    			  <!--create navbar with logo on teh left-->
-			    <div class="logo" onclick="window.location.href='/Index'">
-				    <img class="img" src="../img/Logo.png" alt="Queens College">
-			    </div>
-			    <div id="navbar-right">
-            
-            <form name="logoutForm" class="form-logout"  action="/signOut" method="post">
-				      <button name="signOut" id="out" type="submit" onclick="location.href='/Index'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->
-            </form> 
-            <button name="back" type="submit" id="back" onclick="location.href='/Admin_page'">Back</button> 
-            
-			    </div>
-    		</nav>
+	<body>
+		<nav class="proTopNav">
+			<!--create navbar with logo on teh left-->
+			<div class="logo" onclick="window.location.href='/Index'">
+				<img class="img" src="../img/Logo.png" alt="Queens College">
+			</div>
+			<div id="navbar-right">
 
-		    <header id="banner">  <!--TODO: add the styling to the CSS-->
-			    <img src="../img/Image_comp.png" id="pic" alt="people on computer">
-			    <h1>Professor Added Courses</h1> 
-        </header><br>
+				<form name="logoutForm" class="form-logout"  action="/signOut" method="post">
+					<button name="signOut" id="out" type="submit" onclick="location.href='/Index'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->
+				</form> 
+				<button name="back" type="submit" id="back" onclick="location.href='/Admin_page'">Back</button> 
 
-        <div>
-          <h1 id="collect">Collections in MongoDB</h1>
-           <form name="courses" action="/admin_prof_addCourse" method="post">
-            <table class="table table-striped table-primary">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Courses</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-                <%if (addedCourse != null){ %>
-                <% addedCourse.forEach(function(key){ %>
-                <tr>
-                  <td><%= key.name %></td>
-                  <td><%= key.courses %></td>
-                  
-                </tr>
-                <% })
-                  } %>
-                  </form>
-              </tbody>
-            </table>
-        </div>
-  </body>
+			</div>
+		</nav>
+
+		<header id="banner">  <!--TODO: add the styling to the CSS-->
+			<img src="../img/Image_comp.png" id="pic" alt="people on computer">
+			<h1>Professor Added Courses</h1> 
+		</header><br>
+
+		<div>
+			<h1 id="collect">Collections in MongoDB</h1>
+			<form name="courses" action="/admin_prof_addCourse" method="post">
+				<table class="table table-striped table-primary">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Courses</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<%if (addedCourse != null){ %>
+							<% addedCourse.forEach(function(key){ %>
+								<tr>
+									<td><%= key.name %></td>
+									<td><%= key.courses %></td>
+
+								</tr>
+							<% })
+						} %>
+					</tbody>
+				</table>
+			</form>
+			
+		</div>
+	</body>
 </html>
