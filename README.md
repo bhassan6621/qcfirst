@@ -44,6 +44,7 @@ It also lets the instructors view the classes that they are teaching, add more c
 * For professor side, first the professor add the class to the course model in the database and also it shows up as an array under specific professor who added the course and then those added classes display on the professor homepage table for that specfic professor. 
 * For student side, the student can search the classes that are stored/added by the professor and the classes search show up in table on the same page so student can enroll in those classes. Then the student hit enroll and the course adds in the course array in the user model where the user type is student and then that course show up in the table on student hoempage table. 
 * The students who are enrolled in a specific course shows up in the roster that is on the pofessor homepage for each section and course. The delete button deletes the that specific course from the table as well as the databse.
+* CourseId can't have space.
 * We used replit to host our website and used mongodb atlas databse. 
 * For front-end technologies, we used github, and bootstrap. 
 * For backend, we used node, express, mongodb, mongoose, path, and body-parser.
