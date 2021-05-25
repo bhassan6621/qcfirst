@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+nav {
+    padding-bottom: 5%;
+    /* background-color: #2F4F4F; */
+}
+nav img {
+    height: 50%;
+    width: 5%;
+    margin: 10px;
+}
+nav button {
+    position: relative;
+    z-index: 99;
+    float: right;
+    margin: 10px 10px;
+    background-color: #2F4F4F;
+    color: white;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+#search-form * {
+    display: block;
+    margin: 10px 0 0 20px;
+}
+#search-form h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+#search-form button {
+    margin: 15px 0 0 40px;
+}
+#search-results {
+    margin: 5% 0;
+    text-align: center;
+}
+#search-results h2 {
+    margin-bottom: 30px;
+}
+#search-results button {
+    margin-top: 10px;
+    margin-right: 12%;
+    float: right;
+}
+.classTable {
+    border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+    border-collapse: separate;
+}
+.classTable th, td{ 
+	border: 1px solid black;
+}
+.classTable thead tr {
+	background-color: #2F4F4F;
+	color: white;
+}
+.classTable tbody a > button {
+	border-radius: 10px;
+	background-color: #2F4F4F;
+	color: white;
+}
