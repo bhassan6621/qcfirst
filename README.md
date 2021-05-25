@@ -1,14 +1,16 @@
 # QCFirst Website
+* Live website: https://qcfirst-ejs.bibihassan.repl.co
 
 ## Contributors
 * Bibi Hassan & Navsangeet Kaur
 * We both splitted the pages in half. We came togther before the day of the due date of the deliverables and helped each other out, and also discusses the changes and updates that are needed and evalutae each others work.
-* Bibi Hassan: Created the homepage, student homepage, and student search page. Did the CSS styling for those pages. For the backend deliverable 1, deployed the website, and fixed the media queries to make the tables repsonsive. Turned html files to ejs, and worked on displaying errors in ejs from the backend. For whole final project, worked on backend for professor side such as addded classes to the database and added roster where students who are enrolled in that specific class are shown. For student side such as show the table after a search and put the enrolled courses in the user courses array and after enrolling show the courses on student homepage table. And worked on the admin page for user, courses and sessions to display the collections on the admin page.
-* Navsangeet kaur: Created log in pages for both professor and student, sign up page, professor homepage and add course page. Did the CSS styling for those pages. For backend deliverable 1, created the sign up, log in's post methods, and session using mongodb atlas database. For whole final project, worked on putting the added classes by professor to the coures array in user model and then display the courses on the professor homepage, also worked on deleteing the course from the database and the table when professor clicks the delete button. Also created admin user type, and it's separate log in page and created admin page where the user can see all the collections that are stored in the database, and created links for professor added courses and student enrolled courses to display collections.  
+* Bibi Hassan: Created the homepage, student homepage, student search page, and admin page as well as setting up the ejs framework (in both main directory and server.js), worked on the post methods: search class, query class, add class, and prof_roster.
+* Navsangeet kaur: Created log in pages for both professor and student, sign up page, professor homepage and add course page, delete course post method.
 
 ## Features
  * Responsive Design for mobile, tablet, and desktop
  * Links to get more information about how to use the website 
+ * Contact form is provided
  * Clear Navigation
  * Geographic information
  * Images
@@ -18,7 +20,7 @@ The website lets the students to view the classes that they are enrolled in and 
 It also lets the instructors view the classes that they are teaching, add more classes to their course management and they can also dealte the courses.
 
 ## HTML code for the QCFirst Website
-  * The following link is where our website is published https://bhassan6621.github.io/qcfirst/src/view/Index.html
+  * The following link is where our website is published https://bhassan6621.github.io/qcfirst/src/Index.html
   * There are 8 pages in total in our website:
   * First is homepage where we have the logo and it contains the log in button for the students that redirects the students to the student homepage, log in button for the professors that redirects the professors to the professor homepage, sign up button that will let the professors as well as students to sign up for the account. It also contains the links to the IT help desk and other helpful links as well as contact submission.
   * Sign Up page let the students and the professors to create an account if they don't have one.
@@ -29,29 +31,13 @@ It also lets the instructors view the classes that they are teaching, add more c
   * The professor homepage contains the table with the classes that professors are already decided to teach and one of the column contains delete button which will delete the course and remove it from the table. It also consists the sign out button which will log out the user and redirect to the log in, and has add course button available on the same page that redirects the professors to the add course page.
   * The add course page has the inputs where professor can input the course info that they want to show up on the student's search window search, and after entering the whole information they can click the add button and that course will show up on the professor courses teaching table that is on the professor homepage as well as in the students search table. 
 
+## Backend for the QCFirst Website
+
+
 ## CSS styling for the QCFirst Website
 
 * We have created style.css where the css styling for all the pages are included. The id's and classes are unique and distinguished from each other so the styling can be easier to implemented and don't clash with each other.
 * After implementing the html nd css documents, we see that the website and the visual of the website are quite similar, we tried to implement all the features and content to the website that we put on the visuals. The only difference we see on our homepage, we wanted to provide more information however during implementation it looked so clustered and we had to remove few things in order to highlight the features. 
-
-## Backend
-
-* We have worked on the user management functionalities. 
-* We created the database that has users, and sessions models. 
-* The users models has all the information that the user put in the sign up form to register for the account, both instructor and student sign up information is in the same model. Then, the log in form match the provided email and password with the stored information and let the user log in or alert them if it fails. 
-* The sessions model contains the cookies, session id, and expired date and time information. This model is populated when the user logs in the account.
-* The contact model has all the messages that are sent by the user with their name and message.
-* For professor side, first the professor add the class to the course model in the database and also it shows up as an array under specific professor who added the course and then those added classes display on the professor homepage table for that specfic professor. 
-* For student side, the student can search the classes that are stored/added by the professor and the classes search show up in table on the same page so student can enroll in those classes. Then the student hit enroll and the course adds in the course array in the user model where the user type is student and then that course show up in the table on student hoempage table. 
-* The students who are enrolled in a specific course shows up in the roster that is on the pofessor homepage for each section and course. The delete button deletes the that specific course from the table as well as the databse.
-* CourseId can't have space.
-* We used replit to host our website and used mongodb atlas databse. 
-* For front-end technologies, we used github, and bootstrap. 
-* For backend, we used node, express, mongodb, mongoose, path, and body-parser.
-* This is the live link to our replit: https://qcfirst-ejs.bibihassan.repl.co
-* The link to our package.json: https://github.com/bhassan6621/qcfirst/blob/main/package.json
-* The link to our main server.js: https://replit.com/@bibihassan/qcfirst-ejs#src/server.js
-
 
 ## Visuals of the QCFirst Website
 
@@ -116,6 +102,3 @@ These UI's can also be found here: https://github.com/bhassan6621/qcfirst/tree/m
 * Info page pops up when a student clicks on info that is in the enrollment table while choosing classes and also included in the table that students are already enrolled in 
 * Professor homepage that is visible to professor with different format and features
 * Add courses page is where an instructor can add courses for students to view
-
-
-
