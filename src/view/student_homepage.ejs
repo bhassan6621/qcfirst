@@ -8,19 +8,19 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css" >
 		<link rel="stylesheet" type="text/css" href="../css/student-homepage.css" >
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="./sign_out.js" defer></script>
+		<script src="./sign_out.js" defer></script>
 		<title>QCFirst</title>
 	</head>
-  	<body>
+	<body>
 		<nav>
 			<img src="../img/Logo.png" alt="Queens College" class="logo img" onclick="window.location.href='/Index'">
 			<div id="topnav-right">
 				<a class="btn btn-primary" href="/Student_searchClass">Add Class</a>
 				<a class="btn btn-primary" href="#curr-classes">View Class</a>
-        <form name="logoutForm" class="form-logout" action="/signOut" method="post"> 
-				  
-				      <button name="signOut" type="submit" id="out" onclick="location.href='/Index'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->   
-        </form>
+				<form name="logoutForm" class="form-logout" action="/signOut" method="post"> 
+
+					<button name="signOut" type="submit" id="out" onclick="location.href='/Index'">Sign Out</button> <!--logs out the user and redirect them to the professor log in-->   
+				</form>
 			</div>
 		</nav>
 
@@ -28,45 +28,45 @@
 			<img src="../img/Image_comp.png" alt="people on computer" style="width:100%">
 			<h1>Student Home Page</h1> 
 		</header>
-    	
+
 		<section id="curr-classes">
 			<!-- Displays all currently enrolled classes -->
-      		<h2>Enrolled Classes</h2>
+			<h2>Enrolled Classes</h2>
 			<table class="classTable container">
 				<thead>
 					<tr class="row">
 						<th class="col">Course Name</th>
-            <th class="col">Course Id</th>
+						<th class="col">Course Id</th>
 						<th class="col">Course Number</th>
 						<th class="col">Start Time</th>
-            <th class="col">Instructor</th>
+						<th class="col">Instructor</th>
 						<th class="col">Capacity</th>
 						<th class="col">Deadline</th>
 						<th class="col">Course Description</th>
-				  	</tr>
+					</tr>
 				</thead>
 
 				<tbody>
-          
-            <% if(print != null) {
-            print.forEach( function(course) { %>
-              <tr class="row">
-                <td class="col"><%= course.courseName %></td>
-                <td class="col"><%= course.courseId %></td>
-                <td class="col"><%= course.start %></td>
-                <td class="col"><%= course.instructor %></td>
-                <td class="col"><%= course.capacity %></td>
-                <td class="col"><%= course.enrollDead %></td>   
-                <td class="col"><%= course.description %></td>
-                <td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
-              </tr>
-            <% }) 
-              } %>
-        </tbody>
-							  	
+
+					<% if(print != null) {
+						print.forEach( function(course) { %>
+							<tr class="row">
+								<td class="col"><%= course.courseName %></td>
+								<td class="col"><%= course.courseId %></td>
+								<td class="col"><%= course.start %></td>
+								<td class="col"><%= course.instructor %></td>
+								<td class="col"><%= course.capacity %></td>
+								<td class="col"><%= course.enrollDead %></td>   
+								<td class="col"><%= course.description %></td>
+								<td class="col"><button name="course-info" class="course-info" type="submit">INFO</button></td>
+							</tr>
+						<% }) 
+					} %>
+				</tbody>
+
 			</table>
 		</section>
-        
+
 		<div id="add">
 			<a class="btn btn-primary" id="addbtn" href="/Student_searchClass">Add a Course</a>
 		</div>
@@ -75,12 +75,12 @@
 			<div class="bottom row">
 				<div class="col" id="links">
 					<h3>Links</h3>
-						<ul>
-							<li><a href="https://www.qc.cuny.edu/Pages/home.aspx">Queens College</a></li>
-							<li><a href="https://www.qc.cuny.edu/computing/HelpDesk/Pages/Welcome.aspx">IT Help Desk</a></li>
-							<li><a href="https://www.qc.cuny.edu/admissions/undergraduate/undergraduate_degree_programs/Pages/default.aspx">Undergraduate Degree Program</a></li>
-							<li><a href="https://www.qc.cuny.edu/Academics/Documents/UG_Bulletin_2017_18.pdf">Undergraduate Bulletin</a></li>
-						</ul>
+					<ul>
+						<li><a href="https://www.qc.cuny.edu/Pages/home.aspx">Queens College</a></li>
+						<li><a href="https://www.qc.cuny.edu/computing/HelpDesk/Pages/Welcome.aspx">IT Help Desk</a></li>
+						<li><a href="https://www.qc.cuny.edu/admissions/undergraduate/undergraduate_degree_programs/Pages/default.aspx">Undergraduate Degree Program</a></li>
+						<li><a href="https://www.qc.cuny.edu/Academics/Documents/UG_Bulletin_2017_18.pdf">Undergraduate Bulletin</a></li>
+					</ul>
 				</div>
 				<div id="map" class="col">
 					<a href="https://www.qc.cuny.edu/about/directions/2d/Pages/default.aspx">
