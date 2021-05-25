@@ -8,8 +8,8 @@
 
 #nav-right button {
 	top: 0px;
-  padding: 0px;
-  margin: 0px;
+  	padding: 0px;
+  	margin: 0px;
 	height: 45px;
 	float: right;
 	width: 70px;
@@ -26,9 +26,11 @@
 	width: 40px;
 	height: 30px;
 }
+
 .addBody {
 	font-size: 1.5rem;
 }
+
 .addBody h1{
 	text-align: center;
 	color: #2F4F4F;
